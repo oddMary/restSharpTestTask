@@ -1,0 +1,6 @@
+D:\TicketMasterTasks\4\RestSharpTestTask\RestSharpTestTask\bin\Debug\RestSharpTestTask.exe.config
+D:\TicketMasterTasks\4\RestSharpTestTask\RestSharpTestTask\bin\Debug\RestSharpTestTask.exe
+D:\TicketMasterTasks\4\RestSharpTestTask\RestSharpTestTask\bin\Debug\RestSharpTestTask.pdb
+D:\TicketMasterTasks\4\RestSharpTestTask\RestSharpTestTask\obj\Debug\TestRunner.csproj.CoreCompileInputs.cache
+D:\TicketMasterTasks\4\RestSharpTestTask\RestSharpTestTask\obj\Debug\RestSharpTestTask.exe
+D:\TicketMasterTasks\4\RestSharpTestTask\RestSharpTestTask\obj\Debug\RestSharpTestTask.pdb
