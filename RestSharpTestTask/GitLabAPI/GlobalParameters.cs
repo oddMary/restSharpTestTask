@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace GitLabAPI
 {
-    class GlobalParameters
+    public class GlobalParameters
     {
         public const string PRIVATE_TOKEN = "RrNqtH4tfbvwdUa77oxx";
 
         public const string PRIVATE_TOKEN_HEADER_NAME = "Private-Token";
 
         public const string BASE_URL = "https://gitlab.com/api/v4/";
+
+        public static int _userId = 2709127;
     }
 }

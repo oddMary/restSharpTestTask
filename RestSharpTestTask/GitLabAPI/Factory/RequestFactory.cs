@@ -13,31 +13,28 @@ namespace GitLabAPI.Factories
     {
         public int projectId = 10;
 
-        public static RestRequest GetNameSpacesRequest()
+        public static RestRequest GetNameSpacesRequestWithPrivateTokenHeader()
         {
             RestRequest RestRequest = new RestRequest(RequestParameters.namespaces.ToString());
-            RestRequest.AddHeader(PRIVATE_TOKEN_HEADER_NAME, PRIVATE_TOKEN);
+            RestRequest.AddHeader("Private-Token", PRIVATE_TOKEN);
             RestRequest.Method = Method.GET;
             return RestRequest;
         }
 
-        public static RestRequest AddProjectRequest()
+        public static RestRequest AddProjectRequestWithPrivateTokenHeader()
         {
             RestRequest RestRequest = new RestRequest(RequestParameters.projects.ToString());
-            RestRequest.AddHeader(PRIVATE_TOKEN_HEADER_NAME, PRIVATE_TOKEN);
+            RestRequest.AddHeader("Private-Token", PRIVATE_TOKEN);
             RestRequest.Method = Method.POST;
             return RestRequest;
         }
 
-
-        public static RestRequest CreateGeneralRequest(string request, string headerName, string headerValue, Method method)
+        public static RestRequest CreateCustomRequestWithPrivateTokenHeader(string request, Method method)
         {
             RestRequest RestRequest = new RestRequest(request);
-            RestRequest.AddHeader(headerName, headerValue);
+            RestRequest.AddHeader("Private-Token", PRIVATE_TOKEN);
             RestRequest.Method = method;
             return RestRequest;
         }
-
-
     }
 }

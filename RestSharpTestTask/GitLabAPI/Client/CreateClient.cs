@@ -9,8 +9,16 @@ namespace GitLabAPI.Client
 {
     public class CreateClient
     {
-        public static RestClient NewClient(string url) => new RestClient(url)
+        private static RestClient NewClient { get; set; }
+
+        public static RestClient getNewClient(string url)
         {
-        };
+            return NewClient = new RestClient(url);
+        }
+
+        internal static RestClient getNewClient(object bASE_URL)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

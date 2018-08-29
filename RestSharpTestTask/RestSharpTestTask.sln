@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRunner", "RestSharpTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitLabAPI", "GitLabAPI\GitLabAPI.csproj", "{91EE1CD7-6D7C-4B7E-B982-A156CBB1CE64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{313C782B-60EB-427F-9604-0E73A88E3A2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{91EE1CD7-6D7C-4B7E-B982-A156CBB1CE64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91EE1CD7-6D7C-4B7E-B982-A156CBB1CE64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91EE1CD7-6D7C-4B7E-B982-A156CBB1CE64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{313C782B-60EB-427F-9604-0E73A88E3A2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{313C782B-60EB-427F-9604-0E73A88E3A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{313C782B-60EB-427F-9604-0E73A88E3A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{313C782B-60EB-427F-9604-0E73A88E3A2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
