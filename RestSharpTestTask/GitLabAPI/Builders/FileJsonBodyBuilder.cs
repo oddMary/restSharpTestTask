@@ -23,7 +23,7 @@ namespace GitLabAPI.Builders
             return this;
         }
 
-        public FileJsonBodyBuilder SetContetn(string content)
+        public FileJsonBodyBuilder SetContent(string content)
         {
             fileJsonBody.content = content;
             return this;

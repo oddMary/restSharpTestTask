@@ -13,6 +13,7 @@ namespace GitLabAPI.Services
     {
         RestClient newClient = CreateClient.getNewClient(BASE_URL);
         ProjectJsonBodyBuilder ProjectBodyJson = new ProjectJsonBodyBuilder();
+        WikiJsonBodyBuilder WikiJsonBody = new WikiJsonBodyBuilder();
 
         public string projectId;
 
@@ -50,6 +51,55 @@ namespace GitLabAPI.Services
             return CustomJsonDeserializer.ReturnJsonValue("name", response);
         }
 
+        public int GetStatusCodeAfterArchivedProject()
+        {
+            string requestUrl = "projects/{ProjectId}/archive";
+
+            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.POST);
+            request.AddUrlSegment("ProjectId", 7982135);
+
+            IRestResponse response = newClient.Execute(request);
+
+            return (int)response.StatusCode;
+        }
+
+        public int GetStatusCodeUnarchivedProject()
+        {
+            string requestUrl = "projects/{ProjectId}/unarchive";
+
+            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.POST);
+            request.AddUrlSegment("ProjectId", 7982135);
+            IRestResponse response = newClient.Execute(request);
+
+            return (int)response.StatusCode;
+        }
+
+        public string GetTitleCreateWikiPage()
+        {
+            string requestUrl = "projects/{ProjectId}/wikis";
+
+            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.POST);
+            request.AddUrlSegment("ProjectId", 7982135);
+            request.AddJsonBody(WikiJsonBody.SetContent("SomeContent").SetTitle("SomeTitle").Build());
+
+            IRestResponse response = newClient.Execute(request);
+
+            return CustomJsonDeserializer.ReturnJsonValue("title", response);
+        }
+
+        public int GetStatusCodeDeleteWikiPageSuccessful()
+        {
+            string requestUrl = "projects/{ProjectId}/wikis/{slug}";
+
+            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.DELETE);
+            request.AddUrlSegment("ProjectId", 7982135);
+            request.AddUrlSegment("slug", "SomeTitle");
+
+            IRestResponse response = newClient.Execute(request);
+
+            return (int)response.StatusCode;
+        }
+
         public int GetDeleteProjectActionStatusCode()
         {
             string requestUrl = string.Format("{0}/{{projectId}}", RequestParameters.projects.ToString());
@@ -61,16 +111,5 @@ namespace GitLabAPI.Services
 
             return (int)response.StatusCode;
         }
-
-        public void GetStatusCodeAfterArchivedProject() { }
-
-        public void GetStatusCodeUnarchivedProject() { }
-
-
-
-
-
-
-
     }
 }

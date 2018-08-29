@@ -44,6 +44,7 @@
     <Compile Include="Builders\FileJsonBodyBuilder.cs" />
     <Compile Include="Builders\ProjectJsonBodyBuilder.cs" />
     <Compile Include="Builders\UserJsonBodyBuilder.cs" />
+    <Compile Include="Builders\WikiJsonBodyBuilder.cs" />
     <Compile Include="Client\CreateClient.cs" />
     <Compile Include="enums\StatusCodes.cs" />
     <Compile Include="enums\RequestParameters.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="JsonBodies\FileJsonBody.cs" />
     <Compile Include="JsonBodies\ProjectJsonBody.cs" />
     <Compile Include="JsonBodies\UserJsonBody.cs" />
+    <Compile Include="JsonBodies\WikiJsonBody.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="GlobalParameters.cs" />
     <Compile Include="Services\BranchRequestsService.cs" />
