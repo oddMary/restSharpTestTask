@@ -3,6 +3,7 @@ using GitLabAPI.Client;
 using GitLabAPI.enums;
 using GitLabAPI.Factories;
 using GitLabAPI.Features;
+using GitLabAPI.Wrapper;
 using RestSharp;
 using static GitLabAPI.GlobalParameters;
 
@@ -58,7 +59,7 @@ namespace GitLabAPI.Services
 
             IRestResponse response = RestClient.Execute(request);
 
-            return CustomJsonDeserializer.ReturnJsonValue("message", response);
+            return RegexMessage.RegexWarningMessage(CustomJsonDeserializer.ReturnJsonValue("message", response));
         }
 
     }

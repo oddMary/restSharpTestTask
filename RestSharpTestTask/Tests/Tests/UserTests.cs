@@ -15,7 +15,7 @@ namespace GitLabAPI.Tests
         public string _message = "message";
         public string _email = "123@mail.ru";
 
-        public static string _warningMessageEmail = "{\"email\":[\"has already been taken\"]}";
+        public string _warningMessageExistedEmail = "email:has already been taken";
 
         [OneTimeSetUp]
         public void SetUpServiceObject()
@@ -46,11 +46,9 @@ namespace GitLabAPI.Tests
 
         [Test, Order(4)]
         public void TestAddEmailThatAlreadyExisted()
-        {
-            string username = Regex.Replace(_warningMessageEmail, "\\([^\\(]*\\)", "");
-
+        {  
             Assert.AreEqual(UserRequestsService.GetMessageEmailAlreadyExist(
-                GlobalParameters._requestUrlEmails, Method.POST, GlobalParameters._userId, _email), username);
+                GlobalParameters._requestUrlEmails, Method.POST, GlobalParameters._userId, _email), _warningMessageExistedEmail);
         }
 
         [OneTimeTearDown]

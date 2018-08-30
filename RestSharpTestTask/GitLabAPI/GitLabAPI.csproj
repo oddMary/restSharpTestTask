@@ -60,6 +60,7 @@
     <Compile Include="Services\FileRequestsService.cs" />
     <Compile Include="Services\ProjectRequestsService.cs" />
     <Compile Include="Services\UserRequestsService.cs" />
+    <Compile Include="Wrapper\RegexMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
