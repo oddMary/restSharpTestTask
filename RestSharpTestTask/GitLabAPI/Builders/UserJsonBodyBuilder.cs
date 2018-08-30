@@ -1,31 +1,29 @@
 ﻿using GitLabAPI.JsonBodies;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GitLabAPI.Builders
 {
     class UserJsonBodyBuilder
     {
-        private UserJsonBody UserStatusJsonBody = new UserJsonBody();
+        private UserJsonBody UserJsonBody = new UserJsonBody();
+
+        public UserJsonBodyBuilder SetId(int userId)
+        {
+            UserJsonBody.id = userId;
+            return this;
+        }
 
         public UserJsonBodyBuilder SetMessage(string messge)
         {
-            UserStatusJsonBody.message = messge;
+            UserJsonBody.message = messge;
             return this;
         }
 
         public UserJsonBodyBuilder SetEmail(string email)
         {
-            UserStatusJsonBody.email = email;
+            UserJsonBody.email = email;
             return this;
         }
 
-        public UserJsonBody Build()
-        {
-            return UserStatusJsonBody;
-        }
+        public UserJsonBody Build() => UserJsonBody;
     }
 }

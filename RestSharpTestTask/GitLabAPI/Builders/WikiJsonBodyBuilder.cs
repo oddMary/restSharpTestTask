@@ -12,15 +12,12 @@ namespace GitLabAPI.Builders
             return this;
         }
 
-        public WikiJsonBodyBuilder SetTitle(string title)
+        public WikiJsonBodyBuilder SetTitle(string title) 
         {
             WikiJsonBody.title = title;
             return this;
         }
 
-        public WikiJsonBody Build()
-        {
-            return WikiJsonBody;
-        }
+        public WikiJsonBody Build() => WikiJsonBody;
     }
 }

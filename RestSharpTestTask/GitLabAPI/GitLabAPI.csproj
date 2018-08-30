@@ -41,16 +41,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Builders\FileJsonBodyBuilder.cs" />
     <Compile Include="Builders\ProjectJsonBodyBuilder.cs" />
     <Compile Include="Builders\UserJsonBodyBuilder.cs" />
     <Compile Include="Builders\WikiJsonBodyBuilder.cs" />
     <Compile Include="Client\CreateClient.cs" />
+    <Compile Include="enums\RequestUrlParameters.cs" />
     <Compile Include="enums\StatusCodes.cs" />
-    <Compile Include="enums\RequestParameters.cs" />
     <Compile Include="Factory\RequestFactory.cs" />
     <Compile Include="Features\CustomJsonDeserializer.cs" />
     <Compile Include="JsonBodies\FileJsonBody.cs" />
+    <Compile Include="JsonBodies\FileJsonBodyChield.cs" />
     <Compile Include="JsonBodies\ProjectJsonBody.cs" />
     <Compile Include="JsonBodies\UserJsonBody.cs" />
     <Compile Include="JsonBodies\WikiJsonBody.cs" />

@@ -1,10 +1,5 @@
 ﻿using GitLabAPI.enums;
 using RestSharp;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static GitLabAPI.GlobalParameters;
 
 namespace GitLabAPI.Factories
@@ -15,24 +10,24 @@ namespace GitLabAPI.Factories
 
         public static RestRequest GetNameSpacesRequestWithPrivateTokenHeader()
         {
-            RestRequest RestRequest = new RestRequest(RequestParameters.namespaces.ToString());
-            RestRequest.AddHeader("Private-Token", PRIVATE_TOKEN);
+            RestRequest RestRequest = new RestRequest(RequestUrlParameters.namespaces.ToString());
+            RestRequest.AddHeader(PRIVATE_TOKEN_HEADER_NAME, PRIVATE_TOKEN);
             RestRequest.Method = Method.GET;
             return RestRequest;
         }
 
-        public static RestRequest AddProjectRequestWithPrivateTokenHeader()
+        public static RestRequest PostProjectRequestWithPrivateTokenHeader()
         {
-            RestRequest RestRequest = new RestRequest(RequestParameters.projects.ToString());
-            RestRequest.AddHeader("Private-Token", PRIVATE_TOKEN);
+            RestRequest RestRequest = new RestRequest(RequestUrlParameters.projects.ToString());
+            RestRequest.AddHeader(PRIVATE_TOKEN_HEADER_NAME, PRIVATE_TOKEN);
             RestRequest.Method = Method.POST;
             return RestRequest;
         }
 
-        public static RestRequest CreateCustomRequestWithPrivateTokenHeader(string request, Method method)
+        public static RestRequest CustomRequestWithPrivateTokenHeader(string request, Method method)
         {
             RestRequest RestRequest = new RestRequest(request);
-            RestRequest.AddHeader("Private-Token", PRIVATE_TOKEN);
+            RestRequest.AddHeader(PRIVATE_TOKEN_HEADER_NAME, PRIVATE_TOKEN);
             RestRequest.Method = method;
             return RestRequest;
         }

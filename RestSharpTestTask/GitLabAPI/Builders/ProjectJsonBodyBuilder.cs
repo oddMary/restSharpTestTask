@@ -1,31 +1,23 @@
 ﻿using GitLabAPI.JsonBodies;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GitLabAPI.Builders
 {
     public class ProjectJsonBodyBuilder
     {
-        ProjectJsonBody Project = new ProjectJsonBody();
+        ProjectJsonBody ProjectJsonBody = new ProjectJsonBody();
 
         public ProjectJsonBodyBuilder SetDescription(string description)
         {
-            Project.description = description;
+            ProjectJsonBody.description = description;
             return this;
         }
 
         public ProjectJsonBodyBuilder SetName(string name)
         {
-            Project.name = name;
+            ProjectJsonBody.name = name;
             return this;
         }
 
-        public ProjectJsonBody Build()
-        {
-            return Project;
-        }
+        public ProjectJsonBody Build() => ProjectJsonBody;
     }
 }

@@ -1,16 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace GitLabAPI.JsonBodies
 {
-    class FileJsonBody
+    public class FileJsonBody
     {
         public string file_path { get; set; }
         public string branch { get; set; }
-        public string content { get; set; }
-        public string commit_message { get; set; }
+
+        public FileJsonBody() { }
+
+        public FileJsonBody(string filePath)
+        {
+            this.file_path = filePath;
+        }
+
+        public FileJsonBody(string filePath, string branch)
+        {
+            this.file_path = filePath;
+            this.branch = branch;
+        }
     }
 }

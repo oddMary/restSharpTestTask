@@ -1,7 +1,8 @@
-﻿using GitLabAPI.Builders;
-using GitLabAPI.Client;
+﻿using GitLabAPI.Client;
 using GitLabAPI.Factories;
 using GitLabAPI.Features;
+using GitLabAPI.JsonBodies;
+using GitLabAPI.enums;
 using RestSharp;
 using static GitLabAPI.GlobalParameters;
 
@@ -9,83 +10,87 @@ namespace GitLabAPI.Services
 {
     public class FileRequestsService
     {
-        RestClient newClient = CreateClient.getNewClient(BASE_URL);
-        FileJsonBodyBuilder FileJsonBody = new FileJsonBodyBuilder();
-        ProjectRequestsService ProjectRequestsService = new ProjectRequestsService();
+        RestClient RestClient => CreateClient.GetNewClient(BASE_URL);
+        ProjectRequestsService ProjectRequestsService => new ProjectRequestsService();        
 
-        public int GetErrorMessageWhenCreateFileWithoutTheCommitMessage()
+        public string GetErrorMessageCreateFileWithoutTheCommitMessage(
+            string requestUrl, Method method, int projectId, string fileName, string branch)
         {
-            string requestUrl = "projects/{ProjectId}/repository/files/{FileName}";
-            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.POST);
-            request.AddUrlSegment("ProjectId", 7982135);
-            request.AddUrlSegment("FileName", "file");
-            request.AddJsonBody(FileJsonBody.SetFilePath("file").SetBranch("master").Build());
-            IRestResponse response = newClient.Execute(request);
+            RestRequest request = RequestFactory.CustomRequestWithPrivateTokenHeader(requestUrl, method);
+            request.AddUrlSegment("projectId", projectId);
+            request.AddUrlSegment("fileName", fileName);
+            request.AddJsonBody(new FileJsonBody(fileName, branch));
+
+            IRestResponse response = RestClient.Execute(request);
                 
-            return (int)response.StatusCode;
+            return CustomJsonDeserializer.ReturnJsonValue("error", response);
         }
 
-        public string GetErrorMessageCreateFileInNotChosenRepository()
+        public string GetErrorMessageCreateFileInNotChosenBranch(
+            string requestUrl, Method method, int projectId, string fileName, string commitMessage)
         {
-            string requestUrl = "projects/{ProjectId}/repository/files/{FileName}";
-            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.POST);
-            request.AddUrlSegment("ProjectId", 7982135);
-            request.AddUrlSegment("FileName", "file");
-            request.AddJsonBody(FileJsonBody.SetFilePath("file").SetCommitMessage("commt").Build());
-            IRestResponse response = newClient.Execute(request);
+            RestRequest request = RequestFactory.CustomRequestWithPrivateTokenHeader(requestUrl, method);
+            request.AddUrlSegment("projectId", projectId);
+            request.AddUrlSegment("fileName", fileName);
+            request.AddJsonBody(new FileJsonBodyChield(fileName, commitMessage));
+
+            IRestResponse response = RestClient.Execute(request);
 
             return CustomJsonDeserializer.ReturnJsonValue("message", response);
         }
 
-        public int CreateFileInRepository()
+        public int GetStatusCodeCreateFileInRepository(
+            string requestUrl, Method method, int projectId, string fileName, string branch, string content, string commitMessage)
         {
-            string requestUrl = "projects/{ProjectId}/repository/files/{FileName}";
-            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.POST);
-            request.AddUrlSegment("ProjectId", 7982135);
-            request.AddUrlSegment("FileName", "file");
-            request.AddJsonBody(FileJsonBody.SetFilePath("file").SetBranch("master").SetCommitMessage("commt").Build());
-            IRestResponse response = newClient.Execute(request);
+            RestRequest request = RequestFactory.CustomRequestWithPrivateTokenHeader(requestUrl, method);
+            request.AddUrlSegment("projectId", projectId);
+            request.AddUrlSegment("fileName", fileName);
+            request.AddJsonBody(new FileJsonBodyChield(fileName, branch, content, commitMessage));
+
+            IRestResponse response = RestClient.Execute(request);
 
             return (int)response.StatusCode;
         }
 
-        public string GetErrorMessageAfterTryingToCreateFileWithAlreadyExistedName()
+        public string GetErrorMessageCreateFileWithAlreadyExistedName(
+            string requestUrl, Method method, int projectId, string fileName, string branch, string content, string commitMessage)
         {
-            string requestUrl = "projects/{ProjectId}/repository/files/{FileName}";
-            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.POST);
-            request.AddUrlSegment("ProjectId", 7982135);
-            request.AddUrlSegment("FileName", "file");
-            request.AddJsonBody(FileJsonBody.SetFilePath("file").SetBranch("master").SetCommitMessage("commt").Build());
-            IRestResponse response = newClient.Execute(request);
+            RestRequest request = RequestFactory.CustomRequestWithPrivateTokenHeader(requestUrl, method);
+            request.AddUrlSegment("projectId", projectId);
+            request.AddUrlSegment("fileName", fileName);
+            request.AddJsonBody(new FileJsonBodyChield(fileName, branch, content, commitMessage));
+
+            IRestResponse response = RestClient.Execute(request);
 
             return CustomJsonDeserializer.ReturnJsonValue("message", response);
         }
 
-        public int GetStatusCodeDeleteFileFromArchivedRepositoryFail()
+        public int GetStatusCodeDeleteFileFromArchivedRepository(
+            string requestUrl, Method method, int projectId, string fileName, string commitMessage)
         {
-            if(ProjectRequestsService.GetStatusCodeAfterArchivedProject() == 201)
+            if(ProjectRequestsService.GetStatusCodeArchiveProject(_requestUrlArchived, Method.POST) == (int)StatusCode.CREATED)
             {
-                string requestUrl = "projects/{ProjectId}/repository/files/{FileName}";
-                RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.DELETE);
-                request.AddUrlSegment("ProjectId", 7982135);
-                request.AddUrlSegment("FileName", "file");
-                request.AddJsonBody(FileJsonBody.SetBranch("master").SetCommitMessage("commit").Build());
-                IRestResponse response = newClient.Execute(request);
+                RestRequest request = RequestFactory.CustomRequestWithPrivateTokenHeader(requestUrl, method);
+                request.AddUrlSegment("projectId", _createdProjectId);
+                request.AddUrlSegment("fileName", fileName);
+                request.AddJsonBody(new FileJsonBodyChield(fileName, commitMessage));
+
+                IRestResponse response = RestClient.Execute(request);
 
                 return (int)response.StatusCode;
             }
-
-            return 500;
+            return (int)StatusCode.INTERNAL_ERROR;
         }
 
-        public int GetStausCodeDeleteFileFromRepository()
+        public int GetStatusCodeDeleteFileFromRepository(
+            string requestUrl, Method method, int projectId, string fileName, string branch, string content, string commitMessage)
         {
-            string requestUrl = "projects/{ProjectId}/repository/files/{FileName}";
-            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.DELETE);
-            request.AddUrlSegment("ProjectId", 7982135);
-            request.AddUrlSegment("FileName", "file");
-            request.AddJsonBody(FileJsonBody.SetBranch("master").SetCommitMessage("commit").Build());
-            IRestResponse response = newClient.Execute(request);
+            RestRequest request = RequestFactory.CustomRequestWithPrivateTokenHeader(requestUrl, method);
+            request.AddUrlSegment("projectId", projectId);
+            request.AddUrlSegment("fileName", fileName);
+            request.AddJsonBody(new FileJsonBodyChield(fileName, branch, content, commitMessage));
+
+            IRestResponse response = RestClient.Execute(request);
 
             return (int)response.StatusCode;
         }

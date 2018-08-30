@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace GitLabAPI.enums
 {
     public enum StatusCode
     {
         OK = 200,
-        DELETED = 202
+        DELETE = 204,
+        FORBIDEN = 403,
+        CREATED = 201,
+        DELETE_PROJECT = 202,
+        INTERNAL_ERROR = 500
     }
 }

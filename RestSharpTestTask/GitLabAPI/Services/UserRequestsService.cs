@@ -10,60 +10,53 @@ namespace GitLabAPI.Services
 {
     public class UserRequestsService
     {
-        RestClient newClient = CreateClient.getNewClient(BASE_URL);
-        UserJsonBodyBuilder userStatusJsonBodyBuilder = new UserJsonBodyBuilder();
-
-        public string GetUserState()
+        RestClient RestClient => CreateClient.GetNewClient(BASE_URL);
+        UserJsonBodyBuilder UserStatusJsonBodyBuilder => new UserJsonBodyBuilder();
+          
+        public string GetUserState(string requestUrl, Method method, int userId)
         {
-            string requestUrl = string.Format("{0}/{{userId}}", RequestParameters.users.ToString());
+            RestRequest request = RequestFactory.CustomRequestWithPrivateTokenHeader(requestUrl, method);
+            request.AddUrlSegment("userId", userId);
 
-            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.GET);
-            request.AddUrlSegment("userId", _userId);
-
-            IRestResponse response = newClient.Execute(request);
+            IRestResponse response = RestClient.Execute(request);
 
             return CustomJsonDeserializer.ReturnJsonValue("state", response);
         }
 
-        public string GetUserStatusMessage()
+        public string GetUserStatusMessage(string requestUrl, Method method, int userId)
         {
-            string requestUrl = "user/status";
+            RestRequest request = RequestFactory.CustomRequestWithPrivateTokenHeader(requestUrl, method);
+            request.AddUrlSegment("userId", userId);
+            IRestResponse response = RestClient.Execute(request);
+            return CustomJsonDeserializer.ReturnJsonValue("message", response); ;
+        }
 
-            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.GET);
+        public string GetUpdatedUserStatusMessage(string requestUrl, Method method, string message)
+        {
+            RestRequest request = RequestFactory.CustomRequestWithPrivateTokenHeader(requestUrl, method);
+            request.AddJsonBody(UserStatusJsonBodyBuilder.SetMessage(message).Build());
 
-            IRestResponse response = newClient.Execute(request);
+            IRestResponse response = RestClient.Execute(request);
+
+            return CustomJsonDeserializer.ReturnJsonValue("message", response); ;
+        }
+        
+        public string ReturnDefaultCredantialsOfUserStatus(string requestUrl, Method method, string defaultMessageNull)
+        {
+            RestRequest request = RequestFactory.CustomRequestWithPrivateTokenHeader(requestUrl, method);
+            request.AddJsonBody(UserStatusJsonBodyBuilder.SetMessage(defaultMessageNull).Build());
+
+            IRestResponse response = RestClient.Execute(request);
 
             return CustomJsonDeserializer.ReturnJsonValue("message", response); ;
         }
 
-        public string UpdateUserStatusMessage()
-        {
-            string requestUrl = "user/status";
+        public string GetMessageEmailAlreadyExist(string requestUrl, Method method, int userId, string email)
+        {            
+            RestRequest request = RequestFactory.CustomRequestWithPrivateTokenHeader(requestUrl, method);
+            request.AddJsonBody(UserStatusJsonBodyBuilder.SetId(userId).SetEmail(email).Build());
 
-            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.PUT);
-            request.AddJsonBody(userStatusJsonBodyBuilder.SetMessage("SomeMessage").Build());
-            IRestResponse response = newClient.Execute(request);
-
-            return CustomJsonDeserializer.ReturnJsonValue("message", response); ;
-        }
-
-        public string ReturnDefaultCredantialsOfUser()
-        {
-            string requestUrl = "user/status";
-
-            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.PUT);
-            request.AddJsonBody(userStatusJsonBodyBuilder.SetMessage("null").Build());
-            IRestResponse response = newClient.Execute(request);
-
-            return CustomJsonDeserializer.ReturnJsonValue("message", response); ;
-        }
-
-        public string GetWarningMessageWhenAddEmailForUserThatAlreadyBeenTaken()
-        {
-            string requestUrl = "user/emails";
-            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.POST);
-            request.AddJsonBody(userStatusJsonBodyBuilder.SetEmail("maryjane_1992@mail.ru").Build());
-            IRestResponse response = newClient.Execute(request);
+            IRestResponse response = RestClient.Execute(request);
 
             return CustomJsonDeserializer.ReturnJsonValue("message", response);
         }

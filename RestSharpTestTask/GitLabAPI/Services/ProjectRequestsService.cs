@@ -11,103 +11,88 @@ namespace GitLabAPI.Services
 {
     public class ProjectRequestsService
     {
-        RestClient newClient = CreateClient.getNewClient(BASE_URL);
-        ProjectJsonBodyBuilder ProjectBodyJson = new ProjectJsonBodyBuilder();
-        WikiJsonBodyBuilder WikiJsonBody = new WikiJsonBodyBuilder();
+        RestClient RestClient = CreateClient.GetNewClient(BASE_URL);
+        ProjectJsonBodyBuilder ProjectBodyJson => new ProjectJsonBodyBuilder();
+        WikiJsonBodyBuilder WikiJsonBody => new WikiJsonBodyBuilder();        
 
-        public string projectId;
-
-        public int GetNamespacesRequestStatusCode()
+        public int GetNamespacesStatusCode()
         {
             RestRequest request = RequestFactory.GetNameSpacesRequestWithPrivateTokenHeader();
-
-            IRestResponse respons = newClient.Execute(request);
-
+            IRestResponse respons = RestClient.Execute(request);
             return (int)respons.StatusCode;
         }
 
-        public string GetNameOfNewProject()
+        public string GetNameOfNewProject(string description, string projectName)
         {
-            RestRequest request = RequestFactory.AddProjectRequestWithPrivateTokenHeader();
-            request.AddJsonBody(ProjectBodyJson.SetDescription("NewProject").SetName("SomeProject").Build());
+            RestRequest request = RequestFactory.PostProjectRequestWithPrivateTokenHeader();
+            request.AddJsonBody(ProjectBodyJson.SetDescription(description).SetName(projectName).Build());
 
-            IRestResponse response = newClient.Execute(request);
+            IRestResponse response = RestClient.Execute(request);
             // setUp projectId
-            projectId = CustomJsonDeserializer.ReturnJsonValue("id", response);
+            _createdProjectId = CustomJsonDeserializer.ReturnJsonValue("id", response);
 
             return CustomJsonDeserializer.ReturnJsonValue("name", response);
         }
 
-        public string GetNameOfUpdatedProject()
+        public string GetNameOfUpdatedProject(string requestUrl, Method method, string description, string newProjectName)
         {
-            string requestUrl = string.Format("{0}/{{projectId}}", RequestParameters.projects.ToString());
+            RestRequest request = RequestFactory.CustomRequestWithPrivateTokenHeader(requestUrl, method);
+            request.AddUrlSegment("projectId", _createdProjectId);
+            request.AddJsonBody(ProjectBodyJson.SetDescription(description).SetName(newProjectName).Build());
 
-            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.PUT);
-            request.AddUrlSegment("projectId", projectId);
-            request.AddJsonBody(ProjectBodyJson.SetDescription("UpdatedProject").SetName("UpdatedProject").Build());
-
-            IRestResponse response = newClient.Execute(request);
+            IRestResponse response = RestClient.Execute(request);
 
             return CustomJsonDeserializer.ReturnJsonValue("name", response);
         }
 
-        public int GetStatusCodeAfterArchivedProject()
-        {
-            string requestUrl = "projects/{ProjectId}/archive";
+        public int GetStatusCodeArchiveProject(string requestUrl, Method method)
+        {           
+            RestRequest request = RequestFactory.CustomRequestWithPrivateTokenHeader(requestUrl, method);
+            request.AddUrlSegment("projectId", _createdProjectId);
 
-            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.POST);
-            request.AddUrlSegment("ProjectId", 7982135);
-
-            IRestResponse response = newClient.Execute(request);
+            IRestResponse response = RestClient.Execute(request);
 
             return (int)response.StatusCode;
         }
 
-        public int GetStatusCodeUnarchivedProject()
+        public int GetStatusCodeUnarchiveProject(string requestUrl, Method method)
         {
-            string requestUrl = "projects/{ProjectId}/unarchive";
+            RestRequest request = RequestFactory.CustomRequestWithPrivateTokenHeader(requestUrl, method);
+            request.AddUrlSegment("projectId", _createdProjectId);
 
-            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.POST);
-            request.AddUrlSegment("ProjectId", 7982135);
-            IRestResponse response = newClient.Execute(request);
+            IRestResponse response = RestClient.Execute(request);
 
             return (int)response.StatusCode;
         }
 
-        public string GetTitleCreateWikiPage()
+        public string GetTitleCreatedWikiPage(string requestUrl, Method method, string content, string title)
         {
-            string requestUrl = "projects/{ProjectId}/wikis";
+            RestRequest request = RequestFactory.CustomRequestWithPrivateTokenHeader(requestUrl, method);
+            request.AddUrlSegment("projectId", _createdProjectId);
+            request.AddJsonBody(WikiJsonBody.SetContent(content).SetTitle(title).Build());
 
-            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.POST);
-            request.AddUrlSegment("ProjectId", 7982135);
-            request.AddJsonBody(WikiJsonBody.SetContent("SomeContent").SetTitle("SomeTitle").Build());
-
-            IRestResponse response = newClient.Execute(request);
+            IRestResponse response = RestClient.Execute(request);
 
             return CustomJsonDeserializer.ReturnJsonValue("title", response);
         }
 
-        public int GetStatusCodeDeleteWikiPageSuccessful()
-        {
-            string requestUrl = "projects/{ProjectId}/wikis/{slug}";
+        public int GetStatusCodeDeleteWikiPage(string requestUrl, Method method, string content, string title)
+        { 
+            RestRequest request = RequestFactory.CustomRequestWithPrivateTokenHeader(requestUrl, method);
+            request.AddUrlSegment("projectId", _createdProjectId);
+            request.AddUrlSegment("slug", title);
 
-            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.DELETE);
-            request.AddUrlSegment("ProjectId", 7982135);
-            request.AddUrlSegment("slug", "SomeTitle");
-
-            IRestResponse response = newClient.Execute(request);
+            IRestResponse response = RestClient.Execute(request);
 
             return (int)response.StatusCode;
         }
 
-        public int GetDeleteProjectActionStatusCode()
+        public int GetStatusCodeDeleteProject(string requestUrl, Method method)
         {
-            string requestUrl = string.Format("{0}/{{projectId}}", RequestParameters.projects.ToString());
+            RestRequest request = RequestFactory.CustomRequestWithPrivateTokenHeader(requestUrl, method);
+            request.AddUrlSegment("projectId", _createdProjectId);
 
-            RestRequest request = RequestFactory.CreateCustomRequestWithPrivateTokenHeader(requestUrl, Method.DELETE);
-            request.AddUrlSegment("projectId", projectId);
-
-            IRestResponse response = newClient.Execute(request);
+            IRestResponse response = RestClient.Execute(request);
 
             return (int)response.StatusCode;
         }
