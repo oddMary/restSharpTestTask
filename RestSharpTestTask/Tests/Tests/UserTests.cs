@@ -1,16 +1,21 @@
-﻿using GitLabAPI.Services;
+﻿using GitLabAPI.Builders;
+using GitLabAPI.Factories;
+using GitLabAPI.Features;
+using GitLabAPI.Services;
+using GitLabAPI.Wrapper;
 using NUnit.Framework;
 using RestSharp;
-using System.Text.RegularExpressions;
+using static GitLabAPI.GlobalParameters;
 
 namespace GitLabAPI.Tests
 {
     [TestFixture]
-    class UserTests
+    public class UserTests
     {
-        UserRequestsService UserRequestsService;
+        RestClient Client;
+        UserJsonBodyBuilder UserJsonBodyBuilder => new UserJsonBodyBuilder();
 
-        public string _stete = "active";
+        public string _state = "active";
         public string _defaultStatusMessage = "null";
         public string _message = "message";
         public string _email = "123@mail.ru";
@@ -20,42 +25,62 @@ namespace GitLabAPI.Tests
         [OneTimeSetUp]
         public void SetUpServiceObject()
         {
-            UserRequestsService = new UserRequestsService();
+            Client = CreateClient.GetNewClient(BASE_URL);
         }
 
-        [Test, Order(1)]
+        [Test]
         public void TestGetUserState()
         {
-            Assert.AreEqual(UserRequestsService.GetUserState(
-                GlobalParameters._requestUrlGetUserState, Method.GET, GlobalParameters._userId), _stete);
+            RestRequest GetRequest = RequestFactory.UserRequest(_requestUrlGetUserState, Method.GET, _userId);
+            IRestResponse RestResponse = Client.Execute(GetRequest);
+            string state = JsonDeserializer.ReturnJsonValue("state", RestResponse); ;
+
+            AssertService.AreEqual(state, _state);
         }
 
-        [Test, Order(2)]
+        [Test]
         public void TestGetUserStatusMessage()
         {
-            Assert.AreEqual(UserRequestsService.GetUserStatusMessage(
-                GlobalParameters._requestUrlUserStatus, Method.GET, GlobalParameters._userId), _defaultStatusMessage);
+            object json = UserJsonBodyBuilder.SetMessage(_defaultStatusMessage).Build();
+
+            RestRequest GetRequest = RequestFactory.RequestWithJsonBody(_requestUrlUserStatus, Method.GET, json);
+            IRestResponse RestResponse = Client.Execute(GetRequest);
+            string message = JsonDeserializer.ReturnJsonValue("message", RestResponse); ;
+
+            AssertService.AreEqual(_defaultStatusMessage, message);
         }
 
-        [Test, Order(3)]
+        [Test]
         public void TestUpdateUserStatusMessage()
         {
-            Assert.AreEqual(UserRequestsService.GetUpdatedUserStatusMessage(
-                GlobalParameters._requestUrlUserStatus, Method.PUT, _message), _message);
+            object json = UserJsonBodyBuilder.SetMessage(_message).Build();
+
+            RestRequest GetRequest = RequestFactory.RequestWithJsonBody(_requestUrlUserStatus, Method.PUT, json);
+            IRestResponse RestResponse = Client.Execute(GetRequest);
+            string message = JsonDeserializer.ReturnJsonValue("message", RestResponse); ;
+
+            AssertService.AreEqual(_message, message);
         }
 
-        [Test, Order(4)]
+        [Test]
         public void TestAddEmailThatAlreadyExisted()
-        {  
-            Assert.AreEqual(UserRequestsService.GetMessageEmailAlreadyExist(
-                GlobalParameters._requestUrlEmails, Method.POST, GlobalParameters._userId, _email), _warningMessageExistedEmail);
+        {
+            object json = UserJsonBodyBuilder.SetId(_userId).SetEmail(_email).Build();
+
+            RestRequest GetRequest = RequestFactory.RequestWithJsonBody(_requestUrlEmails, Method.POST, json);
+            IRestResponse RestResponse = Client.Execute(GetRequest);
+            string message = RegexMessage.RegexWarningMessage(JsonDeserializer.ReturnJsonValue("message", RestResponse));
+
+            AssertService.AreEqual(_warningMessageExistedEmail, message);
         }
 
         [OneTimeTearDown]
         public void ReturnDefaultCredantialsOfUserStatus()
         {
-            UserRequestsService.ReturnDefaultCredantialsOfUserStatus(
-                GlobalParameters._requestUrlUserStatus, Method.PUT, _defaultStatusMessage);
+            object json = UserJsonBodyBuilder.SetMessage(_defaultStatusMessage).Build();
+
+            RestRequest GetRequest = RequestFactory.RequestWithJsonBody(_requestUrlUserStatus, Method.PUT, json);
+            IRestResponse RestResponse = Client.Execute(GetRequest);
         }
     }
 }

@@ -1,15 +1,16 @@
 ﻿using NUnit.Framework;
-using GitLabAPI.Services;
 using GitLabAPI.enums;
-using GitLabAPI;
 using RestSharp;
+using GitLabAPI.Factories;
+using static GitLabAPI.GlobalParameters;
+using GitLabAPI.Services;
 
 namespace Tests.Tests
 {
     [TestFixture]
-    class BranchTests
+    class BrunchTests
     {
-        BranchRequestsService BranchRequestsService;
+        RestClient Client;
 
         public string _newBranch = "newBranch";
         public string _branch = "master";
@@ -17,21 +18,28 @@ namespace Tests.Tests
         [OneTimeSetUp]
         public void SetUpServiceObject()
         {
-            BranchRequestsService = new BranchRequestsService();
+            Client = CreateClient.GetNewClient(BASE_URL);
         }
 
-        [Test, Order(1)]
-        public void TestCreateNewBranch()
-        {
-            Assert.AreEqual(BranchRequestsService.GetNameCreatedBranch(
-                GlobalParameters._requestUrlCreateBranch, Method.POST, GlobalParameters._projectId, _newBranch, _branch), _newBranch);
+        [Test]
+        public void TestCreateNewBrunch()
+        { 
+            RestRequest GetRequest = RequestFactory.BranchRequest(_requestUrlBranch, Method.POST, _projectId, _newBranch);
+            GetRequest.AddUrlSegment("branch", _branch);
+            IRestResponse RestResponse = Client.Execute(GetRequest);
+            string statusCode = RestResponse.StatusCode.ToString();
+
+            AssertService.AreEqual(StatusCode.Created.ToString(), statusCode);
         }
 
-        [Test, Order(2)]
+        [Test]
         public void TestDeleteBranch()
         {
-            Assert.AreEqual(BranchRequestsService.GetStatusCodeDeleteBrunch(
-                GlobalParameters._requestUrlDeleteBranch, Method.DELETE, GlobalParameters._projectId, _newBranch), (int)StatusCode.DELETE);
+            RestRequest GetRequest = RequestFactory.BranchRequest(_requestUrlDeleteBranch, Method.DELETE, _projectId, _newBranch);            
+            IRestResponse RestResponse = Client.Execute(GetRequest);
+            string statusCode = RestResponse.StatusCode.ToString();
+
+            AssertService.AreEqual(StatusCode.NoContent.ToString(), statusCode.ToString());
         }
     }
 }

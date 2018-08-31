@@ -10,13 +10,15 @@ namespace GitLabAPI
 
         public static int _userId = 2709127;
         public static int _projectId = 8156878;
-        public static string _createdProjectId;
 
-        public static string _requestUrlCreateBranch = "projects/{projectId}/repository/branches?branch={newBranch}&ref={branch}";
+        public static string _requestUrlNamespaces = "namespaces";
+
+        public static string _requestUrlBranch = "projects/{projectId}/repository/branches?branch={newBranch}&ref={branch}";
         public static string _requestUrlDeleteBranch = "projects/{projectId}/repository/branches/{newBranch}";
 
         public static string _requestUrlFile = "projects/{projectId}/repository/files/{fileName}";
 
+        public static string _requestUrlAddProject = "projects";
         public static string _requestUrlUpdateProject = "projects/{projectId}";
         public static string _requestUrlArchived = "projects/{projectId}/archive";
         public static string _requestUrlUnarchived = "projects/{projectId}/unarchive";
@@ -26,5 +28,7 @@ namespace GitLabAPI
         public static string _requestUrlGetUserState = "users/{userId}";
         public static string _requestUrlUserStatus = "user/status";
         public static string _requestUrlEmails = "user/emails";
+
+        public static string DDTFilePath = "../../Resources/DDT.yml";
     }
 }

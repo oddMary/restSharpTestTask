@@ -2,7 +2,7 @@
 
 namespace GitLabAPI.Builders
 {
-    class UserJsonBodyBuilder
+    public class UserJsonBodyBuilder
     {
         private UserJsonBody UserJsonBody = new UserJsonBody();
 

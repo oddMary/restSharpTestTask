@@ -44,23 +44,23 @@
     <Compile Include="Builders\ProjectJsonBodyBuilder.cs" />
     <Compile Include="Builders\UserJsonBodyBuilder.cs" />
     <Compile Include="Builders\WikiJsonBodyBuilder.cs" />
-    <Compile Include="Client\CreateClient.cs" />
-    <Compile Include="enums\RequestUrlParameters.cs" />
+    <Compile Include="DDTData\DDTUploadFile.cs" />
+    <Compile Include="DDTData\DDTUploadFileList.cs" />
+    <Compile Include="Factories\ClientFactory.cs" />
     <Compile Include="enums\StatusCodes.cs" />
-    <Compile Include="Factory\RequestFactory.cs" />
-    <Compile Include="Features\CustomJsonDeserializer.cs" />
-    <Compile Include="JsonBodies\FileJsonBody.cs" />
-    <Compile Include="JsonBodies\FileJsonBodyChield.cs" />
-    <Compile Include="JsonBodies\ProjectJsonBody.cs" />
-    <Compile Include="JsonBodies\UserJsonBody.cs" />
-    <Compile Include="JsonBodies\WikiJsonBody.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Factories\RequestFactory.cs" />
+    <Compile Include="Features\GetFilePath.cs" />
+    <Compile Include="Features\JsonDeserializer.cs" />
+    <Compile Include="Features\YamlDeserializer.cs" />
+    <Compile Include="Builders\JsonBodies\FileJsonBody.cs" />
+    <Compile Include="Builders\JsonBodies\FileJsonBodyChield.cs" />
+    <Compile Include="Builders\JsonBodies\ProjectJsonBody.cs" />
+    <Compile Include="Builders\JsonBodies\UserJsonBody.cs" />
+    <Compile Include="Builders\JsonBodies\WikiJsonBody.cs" />
     <Compile Include="GlobalParameters.cs" />
-    <Compile Include="Services\BranchRequestsService.cs" />
-    <Compile Include="Services\FileRequestsService.cs" />
-    <Compile Include="Services\ProjectRequestsService.cs" />
-    <Compile Include="Services\UserRequestsService.cs" />
-    <Compile Include="Wrapper\RegexMessage.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Services\AssertService.cs" />
+    <Compile Include="Features\RegexMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -82,7 +82,11 @@
     <Reference Include="WebDriver.Support, Version=3.14.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Selenium.Support.3.14.0\lib\net45\WebDriver.Support.dll</HintPath>
     </Reference>
+    <Reference Include="YamlDotNet, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\YamlDotNet.5.0.1\lib\net45\YamlDotNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
