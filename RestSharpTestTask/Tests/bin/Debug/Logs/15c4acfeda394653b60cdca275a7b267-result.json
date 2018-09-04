@@ -1,0 +1,62 @@
+{
+  "uuid": "36ca9016-e477-4a0d-8a05-0b2046aa8e65-tr-0-1006",
+  "historyId": "Tests.Tests.FileTests.TestAddFile",
+  "fullName": "Tests.Tests.FileTests.TestAddFile",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.FileTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestAddFile"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.FileTests"
+    }
+  ],
+  "links": [],
+  "name": "TestAddFile",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestAddFile",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:33:38,212 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} request\r\n2018-09-04 17:33:38,213 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:33:38,213 | INFO  | Using method: POST\r\n2018-09-04 17:33:38,214 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:33:38,215 | INFO  | Adding header \"fileName\": wtf\r\n2018-09-04 17:33:38,216 | INFO  | Adding json body\r\n2018-09-04 17:33:38,278 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} created\r\n2018-09-04 17:33:39,073 | INFO  | Assert that expected result : Created are equal to actual: Created\r\n2018-09-04 17:33:39,075 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} request\r\n2018-09-04 17:33:39,076 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:33:39,077 | INFO  | Using method: POST\r\n2018-09-04 17:33:39,079 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:33:39,086 | INFO  | Adding header \"fileName\": wtfomg\r\n2018-09-04 17:33:39,089 | INFO  | Adding json body\r\n2018-09-04 17:33:39,090 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} created\r\n2018-09-04 17:33:40,585 | INFO  | Assert that expected result : Created are equal to actual: Created\r\n2018-09-04 17:33:40,587 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} request\r\n2018-09-04 17:33:40,588 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:33:40,590 | INFO  | Using method: POST\r\n2018-09-04 17:33:40,591 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:33:40,592 | INFO  | Adding header \"fileName\": wtfwer\r\n2018-09-04 17:33:40,594 | INFO  | Adding json body\r\n2018-09-04 17:33:40,596 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} created\r\n2018-09-04 17:33:41,455 | INFO  | Assert that expected result : Created are equal to actual: Created\r\n2018-09-04 17:33:41,457 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} request\r\n2018-09-04 17:33:41,458 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:33:41,459 | INFO  | Using method: POST\r\n2018-09-04 17:33:41,461 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:33:41,464 | INFO  | Adding header \"fileName\": wtfFile\r\n2018-09-04 17:33:41,479 | INFO  | Adding json body\r\n2018-09-04 17:33:41,481 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} created\r\n2018-09-04 17:33:42,275 | INFO  | Assert that expected result : Created are equal to actual: Created\r\n"
+        }
+      ],
+      "start": 1536071618207,
+      "stop": 1536071622276
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536071618207,
+  "stop": 1536071622276
+}

@@ -1,0 +1,72 @@
+{
+  "uid" : "c482c2b4248e4f19",
+  "name" : "TestUploadFileWithoutCommitMessage",
+  "fullName" : "Tests.Tests.FileTests.TestUploadFileWithoutCommitMessage",
+  "historyId" : "Tests.Tests.FileTests.TestUploadFileWithoutCommitMessage",
+  "time" : {
+    "start" : 1536071556599,
+    "stop" : 1536071556889,
+    "duration" : 290
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "TestUploadFileWithoutCommitMessage",
+      "time" : {
+        "start" : 1536071556599,
+        "stop" : 1536071556889,
+        "duration" : 290
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "Console Output",
+        "value" : "2018-09-04 17:32:36,599 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} request\r\n2018-09-04 17:32:36,600 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:32:36,601 | INFO  | Using method: POST\r\n2018-09-04 17:32:36,601 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:32:36,602 | INFO  | Adding header \"fileName\": wtfFile\r\n2018-09-04 17:32:36,603 | INFO  | Adding json body\r\n2018-09-04 17:32:36,604 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} created\r\n2018-09-04 17:32:36,888 | INFO  | Assert that expected result : commit_message is missing, commit_message is empty, content is missing are equal to actual: commit_message is missing, commit_message is empty, content is missing\r\n"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "NonParallelWorker"
+  }, {
+    "name" : "host",
+    "value" : "EPBYGOMW0772"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.Tests.FileTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestUploadFileWithoutCommitMessage"
+  }, {
+    "name" : "package",
+    "value" : "Tests.Tests.FileTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c482c2b4248e4f19.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,12 @@
+{
+  "uuid": "02a00511-a457-474b-ab19-442501e5f3c5-tc-0-1009",
+  "name": "Tests.Tests.ProjectTests.TestGetNameSpaces",
+  "children": [
+    "188b379d-44eb-4d60-a38b-dabb20b057b7-tr-0-1010"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1536072132178,
+  "stop": 1536072132375
+}

@@ -1,0 +1,72 @@
+{
+  "uid" : "3ffdb069d320d938",
+  "name" : "TestToDeleteProject",
+  "fullName" : "Tests.Tests.ProjectTests.TestToDeleteProject",
+  "historyId" : "Tests.Tests.ProjectTests.TestToDeleteProject",
+  "time" : {
+    "start" : 1536071631451,
+    "stop" : 1536071631673,
+    "duration" : 222
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "TestToDeleteProject",
+      "time" : {
+        "start" : 1536071631451,
+        "stop" : 1536071631673,
+        "duration" : 222
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "Console Output",
+        "value" : "2018-09-04 17:33:51,451 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId} request\r\n2018-09-04 17:33:51,452 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:33:51,452 | INFO  | Using method: DELETE\r\n2018-09-04 17:33:51,453 | INFO  | Adding header \"projectId\": 8225334\r\n2018-09-04 17:33:51,453 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId} created\r\n2018-09-04 17:33:51,672 | INFO  | Assert that expected result : Accepted are equal to actual: Accepted\r\n"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "NonParallelWorker"
+  }, {
+    "name" : "host",
+    "value" : "EPBYGOMW0772"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.Tests.ProjectTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestToDeleteProject"
+  }, {
+    "name" : "package",
+    "value" : "Tests.Tests.ProjectTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3ffdb069d320d938.json",
+  "parameterValues" : [ ]
+}

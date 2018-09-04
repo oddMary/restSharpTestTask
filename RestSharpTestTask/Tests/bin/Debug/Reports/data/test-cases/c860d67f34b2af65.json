@@ -1,0 +1,72 @@
+{
+  "uid" : "c860d67f34b2af65",
+  "name" : "TestDeleteFileFromRepository",
+  "fullName" : "Tests.Tests.FileTests.TestDeleteFileFromRepository",
+  "historyId" : "Tests.Tests.FileTests.TestDeleteFileFromRepository",
+  "time" : {
+    "start" : 1536071354860,
+    "stop" : 1536071357898,
+    "duration" : 3038
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "TestDeleteFileFromRepository",
+      "time" : {
+        "start" : 1536071354860,
+        "stop" : 1536071357898,
+        "duration" : 3038
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "Console Output",
+        "value" : "2018-09-04 17:29:14,861 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} request\r\n2018-09-04 17:29:14,862 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:29:14,862 | INFO  | Using method: DELETE\r\n2018-09-04 17:29:14,863 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:29:14,863 | INFO  | Adding header \"fileName\": wtf\r\n2018-09-04 17:29:14,864 | INFO  | Adding json body\r\n2018-09-04 17:29:14,865 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} created\r\n2018-09-04 17:29:15,620 | INFO  | Assert that expected result : NoContent are equal to actual: NoContent\r\n2018-09-04 17:29:15,621 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} request\r\n2018-09-04 17:29:15,621 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:29:15,622 | INFO  | Using method: DELETE\r\n2018-09-04 17:29:15,623 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:29:15,624 | INFO  | Adding header \"fileName\": wtfomg\r\n2018-09-04 17:29:15,625 | INFO  | Adding json body\r\n2018-09-04 17:29:15,626 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} created\r\n2018-09-04 17:29:16,355 | INFO  | Assert that expected result : NoContent are equal to actual: NoContent\r\n2018-09-04 17:29:16,356 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} request\r\n2018-09-04 17:29:16,358 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:29:16,360 | INFO  | Using method: DELETE\r\n2018-09-04 17:29:16,361 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:29:16,363 | INFO  | Adding header \"fileName\": wtfwer\r\n2018-09-04 17:29:16,365 | INFO  | Adding json body\r\n2018-09-04 17:29:16,367 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} created\r\n2018-09-04 17:29:17,091 | INFO  | Assert that expected result : NoContent are equal to actual: NoContent\r\n2018-09-04 17:29:17,092 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} request\r\n2018-09-04 17:29:17,093 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:29:17,094 | INFO  | Using method: DELETE\r\n2018-09-04 17:29:17,100 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:29:17,103 | INFO  | Adding header \"fileName\": wtfFile\r\n2018-09-04 17:29:17,108 | INFO  | Adding json body\r\n2018-09-04 17:29:17,113 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} created\r\n2018-09-04 17:29:17,897 | INFO  | Assert that expected result : NoContent are equal to actual: NoContent\r\n"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "NonParallelWorker"
+  }, {
+    "name" : "host",
+    "value" : "EPBYGOMW0772"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.Tests.FileTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestDeleteFileFromRepository"
+  }, {
+    "name" : "package",
+    "value" : "Tests.Tests.FileTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c860d67f34b2af65.json",
+  "parameterValues" : [ ]
+}

@@ -1,5 +1,5 @@
 ﻿
-namespace GitLabAPI.JsonBodies
+namespace GitLabAPI.Builders.JsonBodies
 {
     public class FileJsonBodyChield : FileJsonBody
     {
@@ -8,10 +8,11 @@ namespace GitLabAPI.JsonBodies
 
         public FileJsonBodyChield() : base() { }
 
-        public FileJsonBodyChield(string filePath, string content) : base(filePath)
+        public FileJsonBodyChield(string filePath, string content, string commit) : base(filePath)
         {
             base.file_path = filePath;
             this.content = content;
+            this.commit_message = commit;
         }
 
         public FileJsonBodyChield(string filePath, string branch,string content, string commit_message) :base(filePath, branch)

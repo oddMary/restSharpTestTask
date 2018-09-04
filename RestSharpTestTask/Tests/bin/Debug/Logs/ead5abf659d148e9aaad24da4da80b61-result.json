@@ -1,0 +1,62 @@
+{
+  "uuid": "fe4cae1b-ec9b-45fc-8aa6-52bbd8ce1910-tr-0-1017",
+  "historyId": "Tests.Tests.ProjectTests.TestDeleteWikiPage",
+  "fullName": "Tests.Tests.ProjectTests.TestDeleteWikiPage",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.ProjectTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestDeleteWikiPage"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.ProjectTests"
+    }
+  ],
+  "links": [],
+  "name": "TestDeleteWikiPage",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestDeleteWikiPage",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:39:37,196 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/wikis/{slug} request\r\n2018-09-04 17:39:37,197 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:39:37,198 | INFO  | Using method: DELETE\r\n2018-09-04 17:39:37,199 | INFO  | Adding header \"projectId\": 8225484\r\n2018-09-04 17:39:37,201 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/wikis/{slug} created\r\n2018-09-04 17:39:37,824 | INFO  | Assert that expected result : NoContent are equal to actual: NoContent\r\n"
+        }
+      ],
+      "start": 1536071977196,
+      "stop": 1536071977825
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536071977196,
+  "stop": 1536071977825
+}

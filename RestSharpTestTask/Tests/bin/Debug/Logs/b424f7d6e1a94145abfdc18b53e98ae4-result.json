@@ -1,0 +1,62 @@
+{
+  "uuid": "52db31c1-3482-4967-8f1d-32a44d852bfe-tr-0-1013",
+  "historyId": "Tests.Tests.ProjectTests.TestArchiveProject",
+  "fullName": "Tests.Tests.ProjectTests.TestArchiveProject",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.ProjectTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestArchiveProject"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.ProjectTests"
+    }
+  ],
+  "links": [],
+  "name": "TestArchiveProject",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestArchiveProject",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:31:03,879 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/archive request\r\n2018-09-04 17:31:03,881 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:31:03,882 | INFO  | Using method: POST\r\n2018-09-04 17:31:03,883 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:31:03,884 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/archive created\r\n2018-09-04 17:31:04,158 | INFO  | Assert that expected result : Created are equal to actual: Created\r\n"
+        }
+      ],
+      "start": 1536071463879,
+      "stop": 1536071464159
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536071463879,
+  "stop": 1536071464159
+}

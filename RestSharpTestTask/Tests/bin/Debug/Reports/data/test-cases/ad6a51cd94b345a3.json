@@ -1,0 +1,146 @@
+{
+  "uid" : "ad6a51cd94b345a3",
+  "name" : "TestUpdateUserStatusMessage",
+  "fullName" : "Tests.Tests.UserTests.TestUpdateUserStatusMessage",
+  "historyId" : "Tests.Tests.UserTests.TestUpdateUserStatusMessage",
+  "time" : {
+    "start" : 1536072135240,
+    "stop" : 1536072135547,
+    "duration" : 307
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "TestUpdateUserStatusMessage",
+      "time" : {
+        "start" : 1536072135240,
+        "stop" : 1536072135547,
+        "duration" : 307
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "Console Output",
+        "value" : "2018-09-04 17:42:15,240 | INFO  | Adding \"message\" message to json body\r\n2018-09-04 17:42:15,241 | INFO  | Build json body\r\n2018-09-04 17:42:15,243 | INFO  | Creating https://gitlab.com/api/v4/user/status request\r\n2018-09-04 17:42:15,244 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:42:15,245 | INFO  | Using method: PUT\r\n2018-09-04 17:42:15,246 | INFO  | Adding json body\r\n2018-09-04 17:42:15,247 | INFO  | Request https://gitlab.com/api/v4/user/status created\r\n2018-09-04 17:42:15,545 | INFO  | Assert that expected result : message are equal to actual: message\r\n"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "NonParallelWorker"
+  }, {
+    "name" : "host",
+    "value" : "EPBYGOMW0772"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.Tests.UserTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestUpdateUserStatusMessage"
+  }, {
+    "name" : "package",
+    "value" : "Tests.Tests.UserTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "cd45bfe98418fbca",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071987690,
+        "stop" : 1536071988006,
+        "duration" : 316
+      }
+    }, {
+      "uid" : "53f2fdab8e7697e0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071980745,
+        "stop" : 1536071981070,
+        "duration" : 325
+      }
+    }, {
+      "uid" : "307968aba5bf24bc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071923068,
+        "stop" : 1536071923393,
+        "duration" : 325
+      }
+    }, {
+      "uid" : "3494851831f04fe5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071633774,
+        "stop" : 1536071634091,
+        "duration" : 317
+      }
+    }, {
+      "uid" : "1a4a07e25ee14167",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071564169,
+        "stop" : 1536071564510,
+        "duration" : 341
+      }
+    }, {
+      "uid" : "63186ebdea41c15b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071468440,
+        "stop" : 1536071468804,
+        "duration" : 364
+      }
+    }, {
+      "uid" : "5fe4f0cf215baef7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071364029,
+        "stop" : 1536071364340,
+        "duration" : 311
+      }
+    }, {
+      "uid" : "cc607324ca9a6d69",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071098481,
+        "stop" : 1536071098831,
+        "duration" : 350
+      }
+    }, {
+      "uid" : "124f3c99d00608d7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536070947681,
+        "stop" : 1536070948035,
+        "duration" : 354
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ad6a51cd94b345a3.json",
+  "parameterValues" : [ ]
+}

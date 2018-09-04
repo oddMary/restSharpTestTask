@@ -1,0 +1,12 @@
+{
+  "uuid": "5054634d-ce56-41fc-8dae-2901f363f9db-tc-0-1009",
+  "name": "Tests.Tests.ProjectTests.TestToDeleteProject",
+  "children": [
+    "30c3ddab-9ed4-4bad-9610-2f8e35f739f3-tr-0-1018"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1536071920776,
+  "stop": 1536071921004
+}

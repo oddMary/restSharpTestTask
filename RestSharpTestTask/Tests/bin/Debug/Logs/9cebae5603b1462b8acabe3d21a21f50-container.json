@@ -1,0 +1,12 @@
+{
+  "uuid": "31f2461c-9f99-4414-bb97-f85fa6496c7d-tc-0-1019",
+  "name": "Tests.Tests.UserTests.TestGetUserState",
+  "children": [
+    "65442635-8514-45a2-be5d-588d7447602d-tr-0-1020"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1536070947257,
+  "stop": 1536070947451
+}

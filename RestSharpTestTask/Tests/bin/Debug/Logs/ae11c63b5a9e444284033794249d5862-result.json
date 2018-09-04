@@ -1,0 +1,66 @@
+{
+  "uuid": "10f92a68-8bca-4153-b7ec-2637d9c6bc3d-tr-0-1004",
+  "historyId": "Tests.Tests.FileTests.TestUploadFileWithoutCommitMessage",
+  "fullName": "Tests.Tests.FileTests.TestUploadFileWithoutCommitMessage",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.FileTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestUploadFileWithoutCommitMessage"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.FileTests"
+    }
+  ],
+  "links": [],
+  "name": "TestUploadFileWithoutCommitMessage",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 70 but was 89. Strings differ at index 0.\r\n  Expected: \"commit_message is missing, commit_message is empty, content i...\"\r\n  But was:  \"branch is missing, commit_message is missing, commit_message ...\"\r\n  -----------^\r\n",
+    "trace": "   at GitLabAPI.Services.AssertService.<>c.<.cctor>b__4_0(String expected, String actual) in D:\\TicketMasterTasks\\4\\My\\restSharpTestTask\\RestSharpTestTask\\GitLabAPI\\Services\\AssertService.cs:line 14\r\n   at Tests.Tests.FileTests.TestUploadFileWithoutCommitMessage() in D:\\TicketMasterTasks\\4\\My\\restSharpTestTask\\RestSharpTestTask\\Tests\\Tests\\FileTests.cs:line 43\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestUploadFileWithoutCommitMessage",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected string length 70 but was 89. Strings differ at index 0.\r\n  Expected: \"commit_message is missing, commit_message is empty, content i...\"\r\n  But was:  \"branch is missing, commit_message is missing, commit_message ...\"\r\n  -----------^\r\n",
+        "trace": "   at GitLabAPI.Services.AssertService.<>c.<.cctor>b__4_0(String expected, String actual) in D:\\TicketMasterTasks\\4\\My\\restSharpTestTask\\RestSharpTestTask\\GitLabAPI\\Services\\AssertService.cs:line 14\r\n   at Tests.Tests.FileTests.TestUploadFileWithoutCommitMessage() in D:\\TicketMasterTasks\\4\\My\\restSharpTestTask\\RestSharpTestTask\\Tests\\Tests\\FileTests.cs:line 43\r\n"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:22:21,576 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} request\r\n2018-09-04 17:22:21,577 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:22:21,584 | INFO  | Using method: POST\r\n2018-09-04 17:22:21,587 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:22:21,588 | INFO  | Adding header \"fileName\": wtfFile\r\n2018-09-04 17:22:21,591 | INFO  | Adding json body\r\n2018-09-04 17:22:21,605 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} created\r\n2018-09-04 17:22:21,903 | INFO  | Assert that expected result : commit_message is missing, commit_message is empty, content is missing are equal to actual: branch is missing, commit_message is missing, commit_message is empty, content is missing\r\n"
+        }
+      ],
+      "start": 1536070941574,
+      "stop": 1536070941928
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536070941574,
+  "stop": 1536070941928
+}

@@ -1,0 +1,62 @@
+{
+  "uuid": "d37a464d-0a66-4ae8-99c9-a08d25f100a9-tr-0-1016",
+  "historyId": "Tests.Tests.ProjectTests.TestCreateWikiPage",
+  "fullName": "Tests.Tests.ProjectTests.TestCreateWikiPage",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.ProjectTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestCreateWikiPage"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.ProjectTests"
+    }
+  ],
+  "links": [],
+  "name": "TestCreateWikiPage",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestCreateWikiPage",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:33:48,742 | INFO  | Adding \"content\" wikiContent to json body\r\n2018-09-04 17:33:48,744 | INFO  | Adding \"title\" wikiTitle to json body\r\n2018-09-04 17:33:48,745 | INFO  | Build json body\r\n2018-09-04 17:33:48,746 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/wikis request\r\n2018-09-04 17:33:48,747 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:33:48,748 | INFO  | Using method: POST\r\n2018-09-04 17:33:48,749 | INFO  | Adding header \"projectId\": 8225334\r\n2018-09-04 17:33:48,751 | INFO  | Adding json body\r\n2018-09-04 17:33:48,754 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/wikis created\r\n2018-09-04 17:33:49,872 | INFO  | Assert that expected result : wikiTitle are equal to actual: wikiTitle\r\n"
+        }
+      ],
+      "start": 1536071628742,
+      "stop": 1536071629872
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536071628742,
+  "stop": 1536071629873
+}

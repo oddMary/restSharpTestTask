@@ -1,0 +1,72 @@
+{
+  "uid" : "f70cf8cb8d52d905",
+  "name" : "TestUploadFileWithoutSelectBranch",
+  "fullName" : "Tests.Tests.FileTests.TestUploadFileWithoutSelectBranch",
+  "historyId" : "Tests.Tests.FileTests.TestUploadFileWithoutSelectBranch",
+  "time" : {
+    "start" : 1536071980942,
+    "stop" : 1536071982297,
+    "duration" : 1355
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "TestUploadFileWithoutSelectBranch",
+      "time" : {
+        "start" : 1536071980942,
+        "stop" : 1536071982297,
+        "duration" : 1355
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "Console Output",
+        "value" : "2018-09-04 17:39:40,943 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} request\r\n2018-09-04 17:39:40,943 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:39:40,944 | INFO  | Using method: POST\r\n2018-09-04 17:39:40,945 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:39:40,945 | INFO  | Adding header \"fileName\": wtfFile\r\n2018-09-04 17:39:40,946 | INFO  | Adding json body\r\n2018-09-04 17:39:40,947 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} created\r\n2018-09-04 17:39:42,296 | INFO  | Assert that expected result : You can only create or edit files when you are on a branch are equal to actual: You can only create or edit files when you are on a branch\r\n"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "NonParallelWorker"
+  }, {
+    "name" : "host",
+    "value" : "EPBYGOMW0772"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.Tests.FileTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestUploadFileWithoutSelectBranch"
+  }, {
+    "name" : "package",
+    "value" : "Tests.Tests.FileTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f70cf8cb8d52d905.json",
+  "parameterValues" : [ ]
+}

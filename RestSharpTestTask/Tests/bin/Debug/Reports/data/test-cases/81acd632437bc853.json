@@ -1,0 +1,72 @@
+{
+  "uid" : "81acd632437bc853",
+  "name" : "TestToUploadFileToArchivedRepository",
+  "fullName" : "Tests.Tests.ProjectTests.TestToUploadFileToArchivedRepository",
+  "historyId" : "Tests.Tests.ProjectTests.TestToUploadFileToArchivedRepository",
+  "time" : {
+    "start" : 1536071096376,
+    "stop" : 1536071096714,
+    "duration" : 338
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "TestToUploadFileToArchivedRepository",
+      "time" : {
+        "start" : 1536071096376,
+        "stop" : 1536071096714,
+        "duration" : 338
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "Console Output",
+        "value" : "2018-09-04 17:24:56,376 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} request\r\n2018-09-04 17:24:56,377 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:24:56,378 | INFO  | Using method: POST\r\n2018-09-04 17:24:56,381 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:24:56,382 | INFO  | Adding header \"fileName\": fileNameWTF1234135423\r\n2018-09-04 17:24:56,384 | INFO  | Adding json GitLabAPI.Builders.JsonBodies.FileJsonBodyChield body\r\n2018-09-04 17:24:56,386 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} created\r\n2018-09-04 17:24:56,714 | INFO  | Assert that expected result : Forbidden are equal to actual: Forbidden\r\n"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "NonParallelWorker"
+  }, {
+    "name" : "host",
+    "value" : "EPBYGOMW0772"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.Tests.ProjectTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestToUploadFileToArchivedRepository"
+  }, {
+    "name" : "package",
+    "value" : "Tests.Tests.ProjectTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "81acd632437bc853.json",
+  "parameterValues" : [ ]
+}

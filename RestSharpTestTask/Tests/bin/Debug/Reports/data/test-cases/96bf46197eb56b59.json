@@ -1,0 +1,72 @@
+{
+  "uid" : "96bf46197eb56b59",
+  "name" : "TestGetUserStatusMessage",
+  "fullName" : "Tests.Tests.UserTests.TestGetUserStatusMessage",
+  "historyId" : "Tests.Tests.UserTests.TestGetUserStatusMessage",
+  "time" : {
+    "start" : 1536071633599,
+    "stop" : 1536071633772,
+    "duration" : 173
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "TestGetUserStatusMessage",
+      "time" : {
+        "start" : 1536071633599,
+        "stop" : 1536071633772,
+        "duration" : 173
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "Console Output",
+        "value" : "2018-09-04 17:33:53,600 | INFO  | Adding \"message\" null to json body\r\n2018-09-04 17:33:53,602 | INFO  | Build json body\r\n2018-09-04 17:33:53,607 | INFO  | Creating https://gitlab.com/api/v4/user/status request\r\n2018-09-04 17:33:53,608 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:33:53,609 | INFO  | Using method: GET\r\n2018-09-04 17:33:53,610 | INFO  | Adding json body\r\n2018-09-04 17:33:53,611 | INFO  | Request https://gitlab.com/api/v4/user/status created\r\n2018-09-04 17:33:53,772 | INFO  | Assert that expected result : null are equal to actual: null\r\n"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "NonParallelWorker"
+  }, {
+    "name" : "host",
+    "value" : "EPBYGOMW0772"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.Tests.UserTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestGetUserStatusMessage"
+  }, {
+    "name" : "package",
+    "value" : "Tests.Tests.UserTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "96bf46197eb56b59.json",
+  "parameterValues" : [ ]
+}

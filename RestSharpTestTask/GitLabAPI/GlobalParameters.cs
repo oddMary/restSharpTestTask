@@ -29,6 +29,11 @@ namespace GitLabAPI
         public static string _requestUrlUserStatus = "user/status";
         public static string _requestUrlEmails = "user/emails";
 
-        public static string DDTFilePath = "../../Resources/DDT.yml";
+        public static string DDTFilePath = "../../Resources/DDTUploadFileTest.yml";
+        public static string KDTFilePathAdd = "../../Resources/KDTAddBranchTest.yml";
+        public static string KDTFilePathDelete = "../../Resources/KDTDeleteBranchTest.yml";
+
+        public static string nunitConsolePath = "../../../Resources/nunit3-console/nunit3-console.exe";
+        public static string testPath = "Tests.exe";
     }
 }

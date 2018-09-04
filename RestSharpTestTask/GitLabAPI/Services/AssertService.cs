@@ -1,17 +1,16 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GitLabAPI.Tool;
+using NUnit.Framework;
 
 namespace GitLabAPI.Services
 {
     public class AssertService
     {
-        public static void AreEqual(string expected, string actual)
+        private static readonly Logger _logger = new Logger(typeof(AssertService));
+
+        public delegate void AssertDelegate(string expected, string actual);
+        public static AssertDelegate AssertEqual = (expected, actual) => 
         {
-            Assert.AreEqual(expected, actual);
-        }
+            _logger.Info($"Assert that expected result : {expected} are equal to actual: {actual}");
+            Assert.AreEqual(expected, actual); };
     }
 }

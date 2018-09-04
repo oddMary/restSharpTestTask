@@ -2,15 +2,17 @@
 using GitLabAPI.enums;
 using GitLabAPI.Factories;
 using GitLabAPI.Features;
-using GitLabAPI.JsonBodies;
+using GitLabAPI.Builders.JsonBodies;
 using GitLabAPI.Services;
 using NUnit.Framework;
 using RestSharp;
 using static GitLabAPI.GlobalParameters;
+using NUnit.Allure.Core;
 
-namespace GitLabAPI
+namespace Tests.Tests
 {
     [TestFixture]
+    [AllureNUnit]
     class ProjectTests
     {
         RestClient Client;
@@ -31,7 +33,7 @@ namespace GitLabAPI
         [OneTimeSetUp]
         public void SetUpServiceObject()
         {
-            Client = CreateClient.GetNewClient(BASE_URL);
+            Client = ClientFactory.GetInstance();
         }
 
         [Test]
@@ -41,7 +43,7 @@ namespace GitLabAPI
             IRestResponse RestResponse = Client.Execute(GetRequest);
             string statusCode = RestResponse.StatusCode.ToString();
 
-            AssertService.AreEqual(StatusCode.Ok.ToString().ToUpper(), statusCode);
+            AssertService.AssertEqual(StatusCode.Ok.ToString().ToUpper(), statusCode);
         }
 
         [Test]
@@ -49,13 +51,13 @@ namespace GitLabAPI
         {
             object json = ProjectJsonBody.SetDescription(_description).SetName(_projectName).Build();
 
-            RestRequest GetRequest = RequestFactory.RequestWithJsonBody("projects", Method.POST, json);
+            RestRequest GetRequest = RequestFactory.ProjectRequest("projects", Method.POST, json);
             IRestResponse RestResponse = Client.Execute(GetRequest);
             //Set project id
             NewProject = int.Parse(JsonDeserializer.ReturnJsonValue("id", RestResponse));
             string name = JsonDeserializer.ReturnJsonValue("name", RestResponse); ;
 
-            AssertService.AreEqual(_projectName, name);
+            AssertService.AssertEqual(_projectName, name);
         }
 
         [Test]
@@ -67,7 +69,7 @@ namespace GitLabAPI
             IRestResponse RestResponse = Client.Execute(GetRequest);
             string name = JsonDeserializer.ReturnJsonValue("name", RestResponse); ;
 
-            AssertService.AreEqual(_newProjectName, name);
+            AssertService.AssertEqual(_newProjectName, name);
         }
 
         [Test]
@@ -77,7 +79,7 @@ namespace GitLabAPI
             IRestResponse RestResponse = Client.Execute(GetRequest);
             string statusCode = RestResponse.StatusCode.ToString();
 
-            AssertService.AreEqual(StatusCode.Created.ToString(), statusCode);
+            AssertService.AssertEqual(StatusCode.Created.ToString(), statusCode);
         }
 
         [Test]
@@ -89,7 +91,7 @@ namespace GitLabAPI
             IRestResponse RestResponse = Client.Execute(GetRequest);
             string statusCode = RestResponse.StatusCode.ToString();
 
-            AssertService.AreEqual(StatusCode.Forbidden.ToString(), statusCode);
+            AssertService.AssertEqual(StatusCode.Forbidden.ToString(), statusCode);
         }
 
         [Test]
@@ -99,7 +101,7 @@ namespace GitLabAPI
             IRestResponse RestResponse = Client.Execute(GetRequest);
             string statusCode = RestResponse.StatusCode.ToString();
 
-            AssertService.AreEqual(StatusCode.Created.ToString(), statusCode);
+            AssertService.AssertEqual(StatusCode.Created.ToString(), statusCode);
         }
 
         [Test]
@@ -111,7 +113,7 @@ namespace GitLabAPI
             IRestResponse RestResponse = Client.Execute(GetRequest);
             string title = JsonDeserializer.ReturnJsonValue("title", RestResponse); ;
 
-            AssertService.AreEqual(_wikiTitle, title);
+            AssertService.AssertEqual(_wikiTitle, title);
         }
 
         [Test]
@@ -122,7 +124,7 @@ namespace GitLabAPI
             IRestResponse RestResponse = Client.Execute(GetRequest);
             string statusCode = RestResponse.StatusCode.ToString();
 
-            AssertService.AreEqual(StatusCode.NoContent.ToString(), statusCode);
+            AssertService.AssertEqual(StatusCode.NoContent.ToString(), statusCode);
         }
 
         [Test]
@@ -132,7 +134,7 @@ namespace GitLabAPI
             IRestResponse RestResponse = Client.Execute(GetRequest);
             string statusCode = RestResponse.StatusCode.ToString();
 
-            AssertService.AreEqual(StatusCode.Accepted.ToString(), statusCode);
+            AssertService.AssertEqual(StatusCode.Accepted.ToString(), statusCode);
         }
 
         [OneTimeTearDown]

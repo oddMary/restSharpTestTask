@@ -1,0 +1,12 @@
+{
+  "uuid": "48bc0d3b-73f6-4fb0-8ddd-eab7b32acd25-tc-0-1019",
+  "name": "Tests.Tests.UserTests.TestAddEmailThatAlreadyExisted",
+  "children": [
+    "82582abf-715d-40aa-9453-48424c1a70e8-tr-0-1023"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1536071986955,
+  "stop": 1536071987307
+}

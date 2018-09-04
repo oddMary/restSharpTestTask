@@ -1,0 +1,66 @@
+{
+  "uuid": "01588c4f-556b-4feb-b1d1-3504115026a5-tr-0-1005",
+  "historyId": "Tests.Tests.FileTests.TestUploadFileWithoutSelectBranch",
+  "fullName": "Tests.Tests.FileTests.TestUploadFileWithoutSelectBranch",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.FileTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestUploadFileWithoutSelectBranch"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.FileTests"
+    }
+  ],
+  "links": [],
+  "name": "TestUploadFileWithoutSelectBranch",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.Collections.Generic.KeyNotFoundException : The given key was not present in the dictionary.",
+    "trace": "   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   at GitLabAPI.Features.JsonDeserializer.ReturnJsonValue(String valueKey, IRestResponse response) in D:\\TicketMasterTasks\\4\\My\\restSharpTestTask\\RestSharpTestTask\\GitLabAPI\\Features\\JsonDeserializer.cs:line 13\r\n   at Tests.Tests.FileTests.TestUploadFileWithoutSelectBranch() in D:\\TicketMasterTasks\\4\\My\\restSharpTestTask\\RestSharpTestTask\\Tests\\Tests\\FileTests.cs:line 53"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestUploadFileWithoutSelectBranch",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.Collections.Generic.KeyNotFoundException : The given key was not present in the dictionary.",
+        "trace": "   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   at GitLabAPI.Features.JsonDeserializer.ReturnJsonValue(String valueKey, IRestResponse response) in D:\\TicketMasterTasks\\4\\My\\restSharpTestTask\\RestSharpTestTask\\GitLabAPI\\Features\\JsonDeserializer.cs:line 13\r\n   at Tests.Tests.FileTests.TestUploadFileWithoutSelectBranch() in D:\\TicketMasterTasks\\4\\My\\restSharpTestTask\\RestSharpTestTask\\Tests\\Tests\\FileTests.cs:line 53"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:22:21,931 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} request\r\n2018-09-04 17:22:21,931 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:22:21,932 | INFO  | Using method: POST\r\n2018-09-04 17:22:21,932 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:22:21,933 | INFO  | Adding header \"fileName\": wtfFile\r\n2018-09-04 17:22:21,934 | INFO  | Adding json body\r\n2018-09-04 17:22:21,934 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} created\r\n"
+        }
+      ],
+      "start": 1536070941930,
+      "stop": 1536070942217
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536070941930,
+  "stop": 1536070942217
+}

@@ -1,5 +1,5 @@
 ﻿
-namespace GitLabAPI.JsonBodies
+namespace GitLabAPI.Builders.JsonBodies
 {
     public class FileJsonBody
     {

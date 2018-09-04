@@ -1,0 +1,9 @@
+﻿action:
+  - name: "request"
+    value: "AddBranch"
+  - name: "addSegment"
+    value: "master"
+  - name: "response"
+    value: null
+  - name: "assert"
+    value: "201"

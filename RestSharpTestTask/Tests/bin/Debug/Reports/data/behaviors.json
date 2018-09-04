@@ -1,0 +1,245 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "TestCreateNewBranch",
+    "uid" : "184fdf1368463add",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072118913,
+      "stop" : 1536072120375,
+      "duration" : 1462
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestDeleteBranch",
+    "uid" : "61516ae1923cf80a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072120453,
+      "stop" : 1536072121068,
+      "duration" : 615
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestAddFile",
+    "uid" : "6a8cc3109d1add04",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072121085,
+      "stop" : 1536072125660,
+      "duration" : 4575
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestAddFileWithAlreadyExistedName",
+    "uid" : "fa64d382ec32904a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072125664,
+      "stop" : 1536072126009,
+      "duration" : 345
+    },
+    "flaky" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestDeleteFileFromRepository",
+    "uid" : "ca1fe2e67b92882f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072126010,
+      "stop" : 1536072128980,
+      "duration" : 2970
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestUploadFileWithoutCommitMessage",
+    "uid" : "773af5526c08236d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072128984,
+      "stop" : 1536072129282,
+      "duration" : 298
+    },
+    "flaky" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestUploadFileWithoutSelectBranch",
+    "uid" : "9b05810027c34eec",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072129285,
+      "stop" : 1536072129603,
+      "duration" : 318
+    },
+    "flaky" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestAddProject",
+    "uid" : "42dc9ada6e1f88e0",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072129606,
+      "stop" : 1536072130420,
+      "duration" : 814
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestArchiveProject",
+    "uid" : "d9ec439fa93c5a36",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072130422,
+      "stop" : 1536072130754,
+      "duration" : 332
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestCreateWikiPage",
+    "uid" : "b714be85a67b0016",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072130757,
+      "stop" : 1536072131521,
+      "duration" : 764
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestDeleteWikiPage",
+    "uid" : "d63544a998dbbe4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072131525,
+      "stop" : 1536072132169,
+      "duration" : 644
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestGetNameSpaces",
+    "uid" : "1085035b27ef4585",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072132178,
+      "stop" : 1536072132374,
+      "duration" : 196
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestRenameProject",
+    "uid" : "206bcf837bdbfdc0",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072132377,
+      "stop" : 1536072132835,
+      "duration" : 458
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestToDeleteProject",
+    "uid" : "adf2831b5995aa9",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072132837,
+      "stop" : 1536072133044,
+      "duration" : 207
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestToUploadFileToArchivedRepository",
+    "uid" : "a98591a82db528e7",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072133046,
+      "stop" : 1536072133398,
+      "duration" : 352
+    },
+    "flaky" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestUnarchiveProject",
+    "uid" : "f664d66aa54371e4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072133401,
+      "stop" : 1536072134126,
+      "duration" : 725
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestAddEmailThatAlreadyExisted",
+    "uid" : "6d2c79075bb4deff",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072134491,
+      "stop" : 1536072134855,
+      "duration" : 364
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestGetUserState",
+    "uid" : "f0c2120c990f1fd",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072134857,
+      "stop" : 1536072135037,
+      "duration" : 180
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestGetUserStatusMessage",
+    "uid" : "375acab50b2b809b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072135039,
+      "stop" : 1536072135237,
+      "duration" : 198
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TestUpdateUserStatusMessage",
+    "uid" : "ad6a51cd94b345a3",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1536072135240,
+      "stop" : 1536072135547,
+      "duration" : 307
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  } ]
+}

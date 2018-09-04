@@ -1,0 +1,62 @@
+{
+  "uuid": "b4b23abf-5b12-45b0-b684-9e7d7bdd8d44-tr-0-1010",
+  "historyId": "Tests.Tests.ProjectTests.TestGetNameSpaces",
+  "fullName": "Tests.Tests.ProjectTests.TestGetNameSpaces",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.ProjectTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestGetNameSpaces"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.ProjectTests"
+    }
+  ],
+  "links": [],
+  "name": "TestGetNameSpaces",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestGetNameSpaces",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:24:55,579 | INFO  | Creating https://gitlab.com/api/v4/namespaces request\r\n2018-09-04 17:24:55,580 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:24:55,580 | INFO  | Using method: GET\r\n2018-09-04 17:24:55,581 | INFO  | Request https://gitlab.com/api/v4/namespaces created\r\n2018-09-04 17:24:55,754 | INFO  | Assert that expected result : OK are equal to actual: OK\r\n"
+        }
+      ],
+      "start": 1536071095578,
+      "stop": 1536071095755
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536071095578,
+  "stop": 1536071095755
+}

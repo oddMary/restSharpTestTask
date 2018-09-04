@@ -1,0 +1,62 @@
+{
+  "uuid": "dd2c84d7-c489-4e9f-8547-de6ed9edae89-tr-0-1020",
+  "historyId": "Tests.Tests.UserTests.TestGetUserState",
+  "fullName": "Tests.Tests.UserTests.TestGetUserState",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.UserTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestGetUserState"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.UserTests"
+    }
+  ],
+  "links": [],
+  "name": "TestGetUserState",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestGetUserState",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:31:08,093 | INFO  | Creating https://gitlab.com/api/v4/users/{userId} request\r\n2018-09-04 17:31:08,093 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:31:08,094 | INFO  | Using method: GET\r\n2018-09-04 17:31:08,094 | INFO  | Adding header \"userId\": 2709127\r\n2018-09-04 17:31:08,094 | INFO  | Request https://gitlab.com/api/v4/users/{userId} created\r\n2018-09-04 17:31:08,260 | INFO  | Assert that expected result : active are equal to actual: active\r\n"
+        }
+      ],
+      "start": 1536071468092,
+      "stop": 1536071468261
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536071468092,
+  "stop": 1536071468262
+}

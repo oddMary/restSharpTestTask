@@ -1,0 +1,72 @@
+{
+  "uid" : "ed089d6e86e5ee46",
+  "name" : "TestCreateWikiPage",
+  "fullName" : "Tests.Tests.ProjectTests.TestCreateWikiPage",
+  "historyId" : "Tests.Tests.ProjectTests.TestCreateWikiPage",
+  "time" : {
+    "start" : 1536071094205,
+    "stop" : 1536071094973,
+    "duration" : 768
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "TestCreateWikiPage",
+      "time" : {
+        "start" : 1536071094205,
+        "stop" : 1536071094973,
+        "duration" : 768
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "Console Output",
+        "value" : "2018-09-04 17:24:54,206 | INFO  | Adding \"content\" wikiContent to json body\r\n2018-09-04 17:24:54,210 | INFO  | Adding \"title\" wikiTitle to json body\r\n2018-09-04 17:24:54,212 | INFO  | Build json body\r\n2018-09-04 17:24:54,214 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/wikis request\r\n2018-09-04 17:24:54,215 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:24:54,215 | INFO  | Using method: POST\r\n2018-09-04 17:24:54,217 | INFO  | Adding header \"projectId\": 8224644\r\n2018-09-04 17:24:54,219 | INFO  | Adding json body\r\n2018-09-04 17:24:54,221 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/wikis created\r\n2018-09-04 17:24:54,972 | INFO  | Assert that expected result : wikiTitle are equal to actual: wikiTitle\r\n"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "NonParallelWorker"
+  }, {
+    "name" : "host",
+    "value" : "EPBYGOMW0772"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.Tests.ProjectTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestCreateWikiPage"
+  }, {
+    "name" : "package",
+    "value" : "Tests.Tests.ProjectTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ed089d6e86e5ee46.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,72 @@
+{
+  "uid" : "cd45bfe98418fbca",
+  "name" : "TestUpdateUserStatusMessage",
+  "fullName" : "Tests.Tests.UserTests.TestUpdateUserStatusMessage",
+  "historyId" : "Tests.Tests.UserTests.TestUpdateUserStatusMessage",
+  "time" : {
+    "start" : 1536071987690,
+    "stop" : 1536071988006,
+    "duration" : 316
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "TestUpdateUserStatusMessage",
+      "time" : {
+        "start" : 1536071987690,
+        "stop" : 1536071988006,
+        "duration" : 316
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "Console Output",
+        "value" : "2018-09-04 17:39:47,690 | INFO  | Adding \"message\" message to json body\r\n2018-09-04 17:39:47,691 | INFO  | Build json body\r\n2018-09-04 17:39:47,692 | INFO  | Creating https://gitlab.com/api/v4/user/status request\r\n2018-09-04 17:39:47,693 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:39:47,694 | INFO  | Using method: PUT\r\n2018-09-04 17:39:47,695 | INFO  | Adding json body\r\n2018-09-04 17:39:47,696 | INFO  | Request https://gitlab.com/api/v4/user/status created\r\n2018-09-04 17:39:48,005 | INFO  | Assert that expected result : message are equal to actual: message\r\n"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "NonParallelWorker"
+  }, {
+    "name" : "host",
+    "value" : "EPBYGOMW0772"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.Tests.UserTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestUpdateUserStatusMessage"
+  }, {
+    "name" : "package",
+    "value" : "Tests.Tests.UserTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "cd45bfe98418fbca.json",
+  "parameterValues" : [ ]
+}

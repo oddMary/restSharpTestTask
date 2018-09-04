@@ -1,0 +1,62 @@
+{
+  "uuid": "0c36b037-fb67-4555-94df-0a1373afb02f-tr-0-1012",
+  "historyId": "Tests.Tests.ProjectTests.TestRenameProject",
+  "fullName": "Tests.Tests.ProjectTests.TestRenameProject",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.ProjectTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestRenameProject"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.ProjectTests"
+    }
+  ],
+  "links": [],
+  "name": "TestRenameProject",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestRenameProject",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:33:50,983 | INFO  | Adding \"description\" description to json body\r\n2018-09-04 17:33:50,984 | INFO  | Adding \"name\" omgwtfNew34y34y34y3OMGProjerweyct12wetsweyw313 to json body\r\n2018-09-04 17:33:50,984 | INFO  | Build json body\r\n2018-09-04 17:33:50,986 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId} request\r\n2018-09-04 17:33:50,986 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:33:50,989 | INFO  | Using method: PUT\r\n2018-09-04 17:33:50,990 | INFO  | Adding header \"projectId\": 8225334\r\n2018-09-04 17:33:50,991 | INFO  | Adding json body\r\n2018-09-04 17:33:50,992 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId} created\r\n2018-09-04 17:33:51,448 | INFO  | Assert that expected result : omgwtfNew34y34y34y3OMGProjerweyct12wetsweyw313 are equal to actual: omgwtfNew34y34y34y3OMGProjerweyct12wetsweyw313\r\n"
+        }
+      ],
+      "start": 1536071630983,
+      "stop": 1536071631449
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536071630983,
+  "stop": 1536071631449
+}

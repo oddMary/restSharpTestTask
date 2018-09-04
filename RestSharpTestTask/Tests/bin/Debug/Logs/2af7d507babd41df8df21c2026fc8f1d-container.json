@@ -1,0 +1,12 @@
+{
+  "uuid": "a0213f99-4008-4267-9b66-3c4278f70d76-tc-0-1003",
+  "name": "Tests.Tests.FileTests.TestUploadFileWithoutSelectBranch",
+  "children": [
+    "e4a91f31-420d-4647-aa40-7de54655bb06-tr-0-1005"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1536071092464,
+  "stop": 1536071092796
+}

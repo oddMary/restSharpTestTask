@@ -65,11 +65,11 @@ E:\Epam\TicketMaster\API\RestSharpTestTask\RestSharpTestTask\GitLabAPI\obj\Debug
 E:\Epam\TicketMaster\API\RestSharpTestTask\RestSharpTestTask\GitLabAPI\obj\Debug\GitLabAPI.csproj.CoreCompileInputs.cache
 E:\Epam\TicketMaster\API\RestSharpTestTask\RestSharpTestTask\GitLabAPI\obj\Debug\GitLabAPI.exe
 E:\Epam\TicketMaster\API\RestSharpTestTask\RestSharpTestTask\GitLabAPI\obj\Debug\GitLabAPI.pdb
-D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\nunit.engine.api.dll
-D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\nunit.framework.pdb
+D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\nunit.framework.xml
 D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\NUnit3.TestAdapter.dll
 D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\NUnit3.TestAdapter.pdb
 D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\nunit.engine.dll
+D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\nunit.engine.api.dll
 D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\Mono.Cecil.dll
 D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\GitLabAPI.exe.config
 D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\GitLabAPI.exe
@@ -81,7 +81,7 @@ D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debu
 D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\WebDriver.Support.dll
 D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\YamlDotNet.dll
 D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\Newtonsoft.Json.xml
-D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\nunit.framework.xml
+D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\nunit.framework.pdb
 D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\WebDriver.xml
 D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\WebDriver.Support.xml
 D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\YamlDotNet.xml
@@ -89,3 +89,10 @@ D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\obj\Debu
 D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\obj\Debug\GitLabAPI.csproj.CopyComplete
 D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\obj\Debug\GitLabAPI.exe
 D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\obj\Debug\GitLabAPI.pdb
+D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\obj\Debug\GitLabAPI.csprojAssemblyReference.cache
+D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\ReportPortal.conf
+D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\ReportPortal.Client.dll
+D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\ReportPortal.NUnitExtension.dll
+D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\ReportPortal.Shared.dll
+D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\log4net.dll
+D:\TicketMasterTasks\4\My\restSharpTestTask\RestSharpTestTask\GitLabAPI\bin\Debug\log4net.xml

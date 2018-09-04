@@ -1,0 +1,146 @@
+{
+  "uid" : "1085035b27ef4585",
+  "name" : "TestGetNameSpaces",
+  "fullName" : "Tests.Tests.ProjectTests.TestGetNameSpaces",
+  "historyId" : "Tests.Tests.ProjectTests.TestGetNameSpaces",
+  "time" : {
+    "start" : 1536072132178,
+    "stop" : 1536072132374,
+    "duration" : 196
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "TestGetNameSpaces",
+      "time" : {
+        "start" : 1536072132178,
+        "stop" : 1536072132374,
+        "duration" : 196
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "Console Output",
+        "value" : "2018-09-04 17:42:12,179 | INFO  | Creating https://gitlab.com/api/v4/namespaces request\r\n2018-09-04 17:42:12,180 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:42:12,181 | INFO  | Using method: GET\r\n2018-09-04 17:42:12,187 | INFO  | Request https://gitlab.com/api/v4/namespaces created\r\n2018-09-04 17:42:12,374 | INFO  | Assert that expected result : OK are equal to actual: OK\r\n"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "NonParallelWorker"
+  }, {
+    "name" : "host",
+    "value" : "EPBYGOMW0772"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.Tests.ProjectTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestGetNameSpaces"
+  }, {
+    "name" : "package",
+    "value" : "Tests.Tests.ProjectTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "8c0672b06f98b0e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071984661,
+        "stop" : 1536071984847,
+        "duration" : 186
+      }
+    }, {
+      "uid" : "b90c40fad07741c0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071977828,
+        "stop" : 1536071978024,
+        "duration" : 196
+      }
+    }, {
+      "uid" : "fe9c25081a7ae7c1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071920108,
+        "stop" : 1536071920329,
+        "duration" : 221
+      }
+    }, {
+      "uid" : "41df6d0a637ce4c5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071630801,
+        "stop" : 1536071630980,
+        "duration" : 179
+      }
+    }, {
+      "uid" : "1eba9bdf7907d562",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071561093,
+        "stop" : 1536071561298,
+        "duration" : 205
+      }
+    }, {
+      "uid" : "e25664844b301380",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071465543,
+        "stop" : 1536071465747,
+        "duration" : 204
+      }
+    }, {
+      "uid" : "39eeb1acc97d133f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071361125,
+        "stop" : 1536071361326,
+        "duration" : 201
+      }
+    }, {
+      "uid" : "77e9a38529df4583",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071095578,
+        "stop" : 1536071095755,
+        "duration" : 177
+      }
+    }, {
+      "uid" : "f413158c33f2d2fb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536070945166,
+        "stop" : 1536070945360,
+        "duration" : 194
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1085035b27ef4585.json",
+  "parameterValues" : [ ]
+}

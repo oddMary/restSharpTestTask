@@ -1,0 +1,72 @@
+{
+  "uid" : "b90c40fad07741c0",
+  "name" : "TestGetNameSpaces",
+  "fullName" : "Tests.Tests.ProjectTests.TestGetNameSpaces",
+  "historyId" : "Tests.Tests.ProjectTests.TestGetNameSpaces",
+  "time" : {
+    "start" : 1536071977828,
+    "stop" : 1536071978024,
+    "duration" : 196
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "TestGetNameSpaces",
+      "time" : {
+        "start" : 1536071977828,
+        "stop" : 1536071978023,
+        "duration" : 195
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "Console Output",
+        "value" : "2018-09-04 17:39:37,829 | INFO  | Creating https://gitlab.com/api/v4/namespaces request\r\n2018-09-04 17:39:37,829 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:39:37,837 | INFO  | Using method: GET\r\n2018-09-04 17:39:37,840 | INFO  | Request https://gitlab.com/api/v4/namespaces created\r\n2018-09-04 17:39:38,023 | INFO  | Assert that expected result : OK are equal to actual: OK\r\n"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "NonParallelWorker"
+  }, {
+    "name" : "host",
+    "value" : "EPBYGOMW0772"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.Tests.ProjectTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestGetNameSpaces"
+  }, {
+    "name" : "package",
+    "value" : "Tests.Tests.ProjectTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b90c40fad07741c0.json",
+  "parameterValues" : [ ]
+}

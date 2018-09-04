@@ -1,0 +1,62 @@
+{
+  "uuid": "d4e98c70-afc9-487b-972c-0544216f1389-tr-0-1001",
+  "historyId": "Tests.Tests.BranchTests.TestCreateNewBranch",
+  "fullName": "Tests.Tests.BranchTests.TestCreateNewBranch",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.BranchTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestCreateNewBranch"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.BranchTests"
+    }
+  ],
+  "links": [],
+  "name": "TestCreateNewBranch",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestCreateNewBranch",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:33:36,049 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/branches?branch={newBranch}&ref={branch} request\r\n2018-09-04 17:33:36,052 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:33:36,053 | INFO  | Using method: POST\r\n2018-09-04 17:33:36,057 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:33:36,058 | INFO  | Adding header \"newBranch\" newBranch\r\n2018-09-04 17:33:36,059 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/branches?branch={newBranch}&ref={branch} created\r\n2018-09-04 17:33:37,470 | INFO  | Assert that expected result : Created are equal to actual: Created\r\n"
+        }
+      ],
+      "start": 1536071615967,
+      "stop": 1536071617485
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536071615965,
+  "stop": 1536071617490
+}

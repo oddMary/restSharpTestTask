@@ -1,0 +1,62 @@
+{
+  "uuid": "d1a74cce-7c82-42ca-a707-9bdfa0b66785-tr-0-1007",
+  "historyId": "Tests.Tests.FileTests.TestAddFileWithAlreadyExistedName",
+  "fullName": "Tests.Tests.FileTests.TestAddFileWithAlreadyExistedName",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.FileTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestAddFileWithAlreadyExistedName"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.FileTests"
+    }
+  ],
+  "links": [],
+  "name": "TestAddFileWithAlreadyExistedName",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestAddFileWithAlreadyExistedName",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:32:32,815 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} request\r\n2018-09-04 17:32:32,816 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:32:32,818 | INFO  | Using method: POST\r\n2018-09-04 17:32:32,819 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:32:32,819 | INFO  | Adding header \"fileName\": wtfFile\r\n2018-09-04 17:32:32,820 | INFO  | Adding json body\r\n2018-09-04 17:32:32,822 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} created\r\n2018-09-04 17:32:33,188 | INFO  | Assert that expected result : A file with this name already exists are equal to actual: A file with this name already exists\r\n"
+        }
+      ],
+      "start": 1536071552815,
+      "stop": 1536071553189
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536071552815,
+  "stop": 1536071553189
+}

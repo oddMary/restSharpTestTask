@@ -1,15 +1,17 @@
 ﻿using GitLabAPI.enums;
 using GitLabAPI.Factories;
 using GitLabAPI.Features;
-using GitLabAPI.JsonBodies;
-using GitLabAPI.Services;
+using GitLabAPI.Builders.JsonBodies;
 using NUnit.Framework;
 using RestSharp;
 using static GitLabAPI.GlobalParameters;
+using GitLabAPI.Services;
+using NUnit.Allure.Core;
 
 namespace Tests.Tests
 {
     [TestFixture]
+    [AllureNUnit]
     class FileTests
     {
         RestClient Client;
@@ -19,44 +21,44 @@ namespace Tests.Tests
         public string _content = "content";
         public string _commitMessage = "commitMessage";
 
-        public string _errorMessageUploadFileWithoutCommitMessage = "commit_message is missing, content is missing";
+        public string _errorMessageUploadFileWithoutCommitMessage = "commit_message is missing, commit_message is empty, content is missing";
         public string _errorMessageUploadFileIncorrectBrunch = "You can only create or edit files when you are on a branch";
         public string _errorMessageUploadFileWithExistedName = "A file with this name already exists";
 
         [OneTimeSetUp]
         public void SetUpServiceObject()
         {
-            Client = CreateClient.GetNewClient(BASE_URL);
+            Client = ClientFactory.GetInstance();
         }
 
         [Test]
         public void TestUploadFileWithoutCommitMessage()
         {
-            object json = new FileJsonBody(_fileName, _branch);
+            object json = new FileJsonBody(_fileName, _branch); 
 
             RestRequest GetRequest = RequestFactory.FileRequest(_requestUrlFile, Method.POST, _projectId, _fileName, json);
             IRestResponse RestResponse = Client.Execute(GetRequest);
             string error = JsonDeserializer.ReturnJsonValue("error", RestResponse); ;
 
-            AssertService.AreEqual(_errorMessageUploadFileWithoutCommitMessage, error);
+            AssertService.AssertEqual(_errorMessageUploadFileWithoutCommitMessage, error);
         }
 
         [Test]
-        public void TestUploadFileWithoutSelectBrunch()
+        public void TestUploadFileWithoutSelectBranch()
         {
-            object json = new FileJsonBodyChield(_fileName, _commitMessage);
+            object json = new FileJsonBodyChield(_fileName, _commitMessage, _commitMessage);
 
             RestRequest GetRequest = RequestFactory.FileRequest(_requestUrlFile, Method.POST, _projectId, _fileName, json);
             IRestResponse RestResponse = Client.Execute(GetRequest);
             string message = JsonDeserializer.ReturnJsonValue("message", RestResponse); ;
 
-            AssertService.AreEqual(_errorMessageUploadFileIncorrectBrunch, message);
+            AssertService.AssertEqual(_errorMessageUploadFileIncorrectBrunch, message);
         }
 
         [Test]
         public void TestAddFile()
         {
-            var obj = YamlDeserializer.DDTObjects();
+            var obj = YamlDeserializer.DDTObjects(GetFilePath.GetPath(DDTFilePath));
 
             foreach(var item in obj.Items)
             {
@@ -73,13 +75,13 @@ namespace Tests.Tests
             IRestResponse RestResponse = Client.Execute(GetRequest);
             string message = JsonDeserializer.ReturnJsonValue("message", RestResponse); ;
 
-            AssertService.AreEqual(_errorMessageUploadFileWithExistedName, message);
+            AssertService.AssertEqual(_errorMessageUploadFileWithExistedName, message);
         }
 
         [Test]
         public void TestDeleteFileFromRepository()
         {
-            var obj = YamlDeserializer.DDTObjects();
+            var obj = YamlDeserializer.DDTObjects(GetFilePath.GetPath(DDTFilePath));
 
             foreach (var item in obj.Items)
             {
@@ -95,7 +97,7 @@ namespace Tests.Tests
             IRestResponse RestResponse = Client.Execute(GetRequest);
             string statusCode = RestResponse.StatusCode.ToString();
 
-            AssertService.AreEqual(statusCode, statusCode);
+            AssertService.AssertEqual(statusCode, statusCode);
         }
     }
 }

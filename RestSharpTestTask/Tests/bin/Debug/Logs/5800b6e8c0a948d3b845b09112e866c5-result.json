@@ -1,0 +1,62 @@
+{
+  "uuid": "36ef2918-893b-425e-9ec5-92937c87dd15-tr-0-1022",
+  "historyId": "Tests.Tests.UserTests.TestUpdateUserStatusMessage",
+  "fullName": "Tests.Tests.UserTests.TestUpdateUserStatusMessage",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.UserTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestUpdateUserStatusMessage"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.UserTests"
+    }
+  ],
+  "links": [],
+  "name": "TestUpdateUserStatusMessage",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestUpdateUserStatusMessage",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:39:40,745 | INFO  | Adding \"message\" message to json body\r\n2018-09-04 17:39:40,746 | INFO  | Build json body\r\n2018-09-04 17:39:40,747 | INFO  | Creating https://gitlab.com/api/v4/user/status request\r\n2018-09-04 17:39:40,747 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:39:40,749 | INFO  | Using method: PUT\r\n2018-09-04 17:39:40,749 | INFO  | Adding json body\r\n2018-09-04 17:39:40,750 | INFO  | Request https://gitlab.com/api/v4/user/status created\r\n2018-09-04 17:39:41,069 | INFO  | Assert that expected result : message are equal to actual: message\r\n"
+        }
+      ],
+      "start": 1536071980745,
+      "stop": 1536071981070
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536071980745,
+  "stop": 1536071981070
+}

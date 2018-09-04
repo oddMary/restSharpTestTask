@@ -1,0 +1,72 @@
+{
+  "uid" : "fd7e93fdd30ad60a",
+  "name" : "TestCreateNewBranch",
+  "fullName" : "Tests.Tests.BranchTests.TestCreateNewBranch",
+  "historyId" : "Tests.Tests.BranchTests.TestCreateNewBranch",
+  "time" : {
+    "start" : 1536071546718,
+    "stop" : 1536071548329,
+    "duration" : 1611
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "TestCreateNewBranch",
+      "time" : {
+        "start" : 1536071546719,
+        "stop" : 1536071548325,
+        "duration" : 1606
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "Console Output",
+        "value" : "2018-09-04 17:32:26,806 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/branches?branch={newBranch}&ref={branch} request\r\n2018-09-04 17:32:26,809 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:32:26,810 | INFO  | Using method: POST\r\n2018-09-04 17:32:26,810 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:32:26,811 | INFO  | Adding header \"newBranch\" newBranch\r\n2018-09-04 17:32:26,812 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/branches?branch={newBranch}&ref={branch} created\r\n2018-09-04 17:32:28,310 | INFO  | Assert that expected result : Created are equal to actual: Created\r\n"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "NonParallelWorker"
+  }, {
+    "name" : "host",
+    "value" : "EPBYGOMW0772"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.Tests.BranchTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestCreateNewBranch"
+  }, {
+    "name" : "package",
+    "value" : "Tests.Tests.BranchTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "fd7e93fdd30ad60a.json",
+  "parameterValues" : [ ]
+}

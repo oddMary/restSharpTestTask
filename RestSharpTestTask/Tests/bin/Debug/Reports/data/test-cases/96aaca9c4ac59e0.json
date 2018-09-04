@@ -1,0 +1,78 @@
+{
+  "uid" : "96aaca9c4ac59e0",
+  "name" : "TestAddFileWithAlreadyExistedName",
+  "fullName" : "Tests.Tests.FileTests.TestAddFileWithAlreadyExistedName",
+  "historyId" : "Tests.Tests.FileTests.TestAddFileWithAlreadyExistedName",
+  "time" : {
+    "start" : 1536071977316,
+    "stop" : 1536071978080,
+    "duration" : 764
+  },
+  "status" : "failed",
+  "statusMessage" : "  Expected string length 36 but was 13. Strings differ at index 0.\r\n  Expected: \"A file with this name already exists\"\r\n  But was:  \"403 Forbidden\"\r\n  -----------^\r\n",
+  "statusTrace" : "   at GitLabAPI.Services.AssertService.<>c.<.cctor>b__4_0(String expected, String actual) in D:\\TicketMasterTasks\\4\\My\\restSharpTestTask\\RestSharpTestTask\\GitLabAPI\\Services\\AssertService.cs:line 14\r\n   at Tests.Tests.FileTests.TestAddFileWithAlreadyExistedName() in D:\\TicketMasterTasks\\4\\My\\restSharpTestTask\\RestSharpTestTask\\Tests\\Tests\\FileTests.cs:line 78\r\n",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "  Expected string length 36 but was 13. Strings differ at index 0.\r\n  Expected: \"A file with this name already exists\"\r\n  But was:  \"403 Forbidden\"\r\n  -----------^\r\n",
+    "statusTrace" : "   at GitLabAPI.Services.AssertService.<>c.<.cctor>b__4_0(String expected, String actual) in D:\\TicketMasterTasks\\4\\My\\restSharpTestTask\\RestSharpTestTask\\GitLabAPI\\Services\\AssertService.cs:line 14\r\n   at Tests.Tests.FileTests.TestAddFileWithAlreadyExistedName() in D:\\TicketMasterTasks\\4\\My\\restSharpTestTask\\RestSharpTestTask\\Tests\\Tests\\FileTests.cs:line 78\r\n",
+    "steps" : [ {
+      "name" : "TestAddFileWithAlreadyExistedName",
+      "time" : {
+        "start" : 1536071977316,
+        "stop" : 1536071978080,
+        "duration" : 764
+      },
+      "status" : "failed",
+      "statusMessage" : "  Expected string length 36 but was 13. Strings differ at index 0.\r\n  Expected: \"A file with this name already exists\"\r\n  But was:  \"403 Forbidden\"\r\n  -----------^\r\n",
+      "statusTrace" : "   at GitLabAPI.Services.AssertService.<>c.<.cctor>b__4_0(String expected, String actual) in D:\\TicketMasterTasks\\4\\My\\restSharpTestTask\\RestSharpTestTask\\GitLabAPI\\Services\\AssertService.cs:line 14\r\n   at Tests.Tests.FileTests.TestAddFileWithAlreadyExistedName() in D:\\TicketMasterTasks\\4\\My\\restSharpTestTask\\RestSharpTestTask\\Tests\\Tests\\FileTests.cs:line 78\r\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "Console Output",
+        "value" : "2018-09-04 17:39:37,316 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} request\r\n2018-09-04 17:39:37,317 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:39:37,319 | INFO  | Using method: POST\r\n2018-09-04 17:39:37,320 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:39:37,321 | INFO  | Adding header \"fileName\": wtfFile\r\n2018-09-04 17:39:37,322 | INFO  | Adding json body\r\n2018-09-04 17:39:37,323 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} created\r\n2018-09-04 17:39:38,038 | INFO  | Assert that expected result : A file with this name already exists are equal to actual: 403 Forbidden\r\n"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "NonParallelWorker"
+  }, {
+    "name" : "host",
+    "value" : "EPBYGOMW0772"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.Tests.FileTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestAddFileWithAlreadyExistedName"
+  }, {
+    "name" : "package",
+    "value" : "Tests.Tests.FileTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "96aaca9c4ac59e0.json",
+  "parameterValues" : [ ]
+}

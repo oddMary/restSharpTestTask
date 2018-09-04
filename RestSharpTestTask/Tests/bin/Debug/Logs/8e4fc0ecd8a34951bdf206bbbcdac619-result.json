@@ -1,0 +1,66 @@
+{
+  "uuid": "8648b800-d28f-4e29-b13f-df1f13eff00d-tr-0-1014",
+  "historyId": "Tests.Tests.ProjectTests.TestToUploadFileToArchivedRepository",
+  "fullName": "Tests.Tests.ProjectTests.TestToUploadFileToArchivedRepository",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.ProjectTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestToUploadFileToArchivedRepository"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.ProjectTests"
+    }
+  ],
+  "links": [],
+  "name": "TestToUploadFileToArchivedRepository",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 9 but was 10. Strings differ at index 0.\r\n  Expected: \"Forbidden\"\r\n  But was:  \"BadRequest\"\r\n  -----------^\r\n",
+    "trace": "   at GitLabAPI.Services.AssertService.<>c.<.cctor>b__4_0(String expected, String actual) in D:\\TicketMasterTasks\\4\\My\\restSharpTestTask\\RestSharpTestTask\\GitLabAPI\\Services\\AssertService.cs:line 14\r\n   at Tests.Tests.ProjectTests.TestToUploadFileToArchivedRepository() in D:\\TicketMasterTasks\\4\\My\\restSharpTestTask\\RestSharpTestTask\\Tests\\Tests\\ProjectTests.cs:line 94\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestToUploadFileToArchivedRepository",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected string length 9 but was 10. Strings differ at index 0.\r\n  Expected: \"Forbidden\"\r\n  But was:  \"BadRequest\"\r\n  -----------^\r\n",
+        "trace": "   at GitLabAPI.Services.AssertService.<>c.<.cctor>b__4_0(String expected, String actual) in D:\\TicketMasterTasks\\4\\My\\restSharpTestTask\\RestSharpTestTask\\GitLabAPI\\Services\\AssertService.cs:line 14\r\n   at Tests.Tests.ProjectTests.TestToUploadFileToArchivedRepository() in D:\\TicketMasterTasks\\4\\My\\restSharpTestTask\\RestSharpTestTask\\Tests\\Tests\\ProjectTests.cs:line 94\r\n"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:22:25,986 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} request\r\n2018-09-04 17:22:25,987 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:22:25,988 | INFO  | Using method: POST\r\n2018-09-04 17:22:25,989 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:22:25,989 | INFO  | Adding header \"fileName\": fileNameWTF1234135423\r\n2018-09-04 17:22:25,990 | INFO  | Adding json body\r\n2018-09-04 17:22:25,991 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} created\r\n2018-09-04 17:22:26,284 | INFO  | Assert that expected result : Forbidden are equal to actual: BadRequest\r\n"
+        }
+      ],
+      "start": 1536070945986,
+      "stop": 1536070946286
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536070945986,
+  "stop": 1536070946286
+}

@@ -1,0 +1,62 @@
+{
+  "uuid": "c44bfd01-68b5-4462-be97-68396915bd11-tr-0-1002",
+  "historyId": "Tests.Tests.BranchTests.TestDeleteBranch",
+  "fullName": "Tests.Tests.BranchTests.TestDeleteBranch",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.BranchTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestDeleteBranch"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.BranchTests"
+    }
+  ],
+  "links": [],
+  "name": "TestDeleteBranch",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestDeleteBranch",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:33:37,568 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/branches/{newBranch} request\r\n2018-09-04 17:33:37,569 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:33:37,572 | INFO  | Using method: DELETE\r\n2018-09-04 17:33:37,572 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:33:37,573 | INFO  | Adding header \"newBranch\" newBranch\r\n2018-09-04 17:33:37,574 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/branches/{newBranch} created\r\n2018-09-04 17:33:38,195 | INFO  | Assert that expected result : NoContent are equal to actual: NoContent\r\n"
+        }
+      ],
+      "start": 1536071617567,
+      "stop": 1536071618196
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536071617567,
+  "stop": 1536071618196
+}

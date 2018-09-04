@@ -1,0 +1,72 @@
+{
+  "uid" : "5f39ef0b0622e531",
+  "name" : "TestRenameProject",
+  "fullName" : "Tests.Tests.ProjectTests.TestRenameProject",
+  "historyId" : "Tests.Tests.ProjectTests.TestRenameProject",
+  "time" : {
+    "start" : 1536071095759,
+    "stop" : 1536071096148,
+    "duration" : 389
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "TestRenameProject",
+      "time" : {
+        "start" : 1536071095759,
+        "stop" : 1536071096148,
+        "duration" : 389
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "Console Output",
+        "value" : "2018-09-04 17:24:55,760 | INFO  | Adding \"description\" description to json body\r\n2018-09-04 17:24:55,761 | INFO  | Adding \"name\" omgwtfNew34y34y34y3OMGProjerweyct12wetsweyw313 to json body\r\n2018-09-04 17:24:55,763 | INFO  | Build json body\r\n2018-09-04 17:24:55,763 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId} request\r\n2018-09-04 17:24:55,764 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:24:55,765 | INFO  | Using method: PUT\r\n2018-09-04 17:24:55,766 | INFO  | Adding header \"projectId\": 8224644\r\n2018-09-04 17:24:55,767 | INFO  | Adding json body\r\n2018-09-04 17:24:55,769 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId} created\r\n2018-09-04 17:24:56,148 | INFO  | Assert that expected result : omgwtfNew34y34y34y3OMGProjerweyct12wetsweyw313 are equal to actual: omgwtfNew34y34y34y3OMGProjerweyct12wetsweyw313\r\n"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "NonParallelWorker"
+  }, {
+    "name" : "host",
+    "value" : "EPBYGOMW0772"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.Tests.ProjectTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestRenameProject"
+  }, {
+    "name" : "package",
+    "value" : "Tests.Tests.ProjectTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5f39ef0b0622e531.json",
+  "parameterValues" : [ ]
+}

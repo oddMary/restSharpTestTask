@@ -1,0 +1,12 @@
+{
+  "uuid": "fafa7e53-4b24-4556-bfb4-68bb0fd0b272-tc-0-1003",
+  "name": "Tests.Tests.FileTests.TestAddFileWithAlreadyExistedName",
+  "children": [
+    "ce1a3dbf-35fe-4c47-bffc-40ea382cb7a2-tr-0-1007"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1536072125664,
+  "stop": 1536072126009
+}

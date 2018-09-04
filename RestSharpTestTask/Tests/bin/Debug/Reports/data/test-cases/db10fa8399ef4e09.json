@@ -1,0 +1,72 @@
+{
+  "uid" : "db10fa8399ef4e09",
+  "name" : "TestAddEmailThatAlreadyExisted",
+  "fullName" : "Tests.Tests.UserTests.TestAddEmailThatAlreadyExisted",
+  "historyId" : "Tests.Tests.UserTests.TestAddEmailThatAlreadyExisted",
+  "time" : {
+    "start" : 1536071633084,
+    "stop" : 1536071633420,
+    "duration" : 336
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "TestAddEmailThatAlreadyExisted",
+      "time" : {
+        "start" : 1536071633084,
+        "stop" : 1536071633420,
+        "duration" : 336
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "Console Output",
+        "value" : "2018-09-04 17:33:53,085 | INFO  | Adding \"userId\" 2709127 to json body\r\n2018-09-04 17:33:53,086 | INFO  | Build json body\r\n2018-09-04 17:33:53,087 | INFO  | Creating https://gitlab.com/api/v4/user/emails request\r\n2018-09-04 17:33:53,088 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:33:53,088 | INFO  | Using method: POST\r\n2018-09-04 17:33:53,089 | INFO  | Adding json body\r\n2018-09-04 17:33:53,090 | INFO  | Request https://gitlab.com/api/v4/user/emails created\r\n2018-09-04 17:33:53,419 | INFO  | Assert that expected result : email:has already been taken are equal to actual: email:has already been taken\r\n"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "NonParallelWorker"
+  }, {
+    "name" : "host",
+    "value" : "EPBYGOMW0772"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.Tests.UserTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestAddEmailThatAlreadyExisted"
+  }, {
+    "name" : "package",
+    "value" : "Tests.Tests.UserTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "db10fa8399ef4e09.json",
+  "parameterValues" : [ ]
+}

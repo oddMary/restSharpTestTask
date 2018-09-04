@@ -1,0 +1,72 @@
+{
+  "uid" : "83622bbd5e6f6b6d",
+  "name" : "TestUnarchiveProject",
+  "fullName" : "Tests.Tests.ProjectTests.TestUnarchiveProject",
+  "historyId" : "Tests.Tests.ProjectTests.TestUnarchiveProject",
+  "time" : {
+    "start" : 1536071979015,
+    "stop" : 1536071979665,
+    "duration" : 650
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "TestUnarchiveProject",
+      "time" : {
+        "start" : 1536071979015,
+        "stop" : 1536071979665,
+        "duration" : 650
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "Console Output",
+        "value" : "2018-09-04 17:39:39,015 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/unarchive request\r\n2018-09-04 17:39:39,017 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:39:39,021 | INFO  | Using method: POST\r\n2018-09-04 17:39:39,022 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:39:39,023 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/unarchive created\r\n2018-09-04 17:39:39,664 | INFO  | Assert that expected result : Created are equal to actual: Created\r\n"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "NonParallelWorker"
+  }, {
+    "name" : "host",
+    "value" : "EPBYGOMW0772"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.Tests.ProjectTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestUnarchiveProject"
+  }, {
+    "name" : "package",
+    "value" : "Tests.Tests.ProjectTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "83622bbd5e6f6b6d.json",
+  "parameterValues" : [ ]
+}

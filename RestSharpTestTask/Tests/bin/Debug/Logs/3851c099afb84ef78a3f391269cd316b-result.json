@@ -1,0 +1,62 @@
+{
+  "uuid": "69e7bcb1-7e8c-49f0-b0d5-ac0cdd6504bc-tr-0-1023",
+  "historyId": "Tests.Tests.UserTests.TestAddEmailThatAlreadyExisted",
+  "fullName": "Tests.Tests.UserTests.TestAddEmailThatAlreadyExisted",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.UserTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestAddEmailThatAlreadyExisted"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.UserTests"
+    }
+  ],
+  "links": [],
+  "name": "TestAddEmailThatAlreadyExisted",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestAddEmailThatAlreadyExisted",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:24:57,750 | INFO  | Adding \"userId\" 2709127 to json body\r\n2018-09-04 17:24:57,751 | INFO  | Build json body\r\n2018-09-04 17:24:57,752 | INFO  | Creating https://gitlab.com/api/v4/user/emails request\r\n2018-09-04 17:24:57,753 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:24:57,754 | INFO  | Using method: POST\r\n2018-09-04 17:24:57,754 | INFO  | Adding json body\r\n2018-09-04 17:24:57,756 | INFO  | Request https://gitlab.com/api/v4/user/emails created\r\n2018-09-04 17:24:58,100 | INFO  | Assert that expected result : email:has already been taken are equal to actual: email:has already been taken\r\n"
+        }
+      ],
+      "start": 1536071097750,
+      "stop": 1536071098100
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536071097750,
+  "stop": 1536071098100
+}

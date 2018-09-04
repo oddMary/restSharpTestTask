@@ -1,0 +1,62 @@
+{
+  "uuid": "30c3ddab-9ed4-4bad-9610-2f8e35f739f3-tr-0-1018",
+  "historyId": "Tests.Tests.ProjectTests.TestToDeleteProject",
+  "fullName": "Tests.Tests.ProjectTests.TestToDeleteProject",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.ProjectTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestToDeleteProject"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.ProjectTests"
+    }
+  ],
+  "links": [],
+  "name": "TestToDeleteProject",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestToDeleteProject",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:38:40,776 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId} request\r\n2018-09-04 17:38:40,777 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:38:40,778 | INFO  | Using method: DELETE\r\n2018-09-04 17:38:40,779 | INFO  | Adding header \"projectId\": 8225470\r\n2018-09-04 17:38:40,780 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId} created\r\n2018-09-04 17:38:41,002 | INFO  | Assert that expected result : Accepted are equal to actual: Accepted\r\n"
+        }
+      ],
+      "start": 1536071920776,
+      "stop": 1536071921002
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536071920776,
+  "stop": 1536071921002
+}

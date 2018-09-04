@@ -1,0 +1,146 @@
+{
+  "uid" : "adf2831b5995aa9",
+  "name" : "TestToDeleteProject",
+  "fullName" : "Tests.Tests.ProjectTests.TestToDeleteProject",
+  "historyId" : "Tests.Tests.ProjectTests.TestToDeleteProject",
+  "time" : {
+    "start" : 1536072132837,
+    "stop" : 1536072133044,
+    "duration" : 207
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "TestToDeleteProject",
+      "time" : {
+        "start" : 1536072132837,
+        "stop" : 1536072133044,
+        "duration" : 207
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "Console Output",
+        "value" : "2018-09-04 17:42:12,838 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId} request\r\n2018-09-04 17:42:12,838 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:42:12,839 | INFO  | Using method: DELETE\r\n2018-09-04 17:42:12,839 | INFO  | Adding header \"projectId\": 8225528\r\n2018-09-04 17:42:12,840 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId} created\r\n2018-09-04 17:42:13,044 | INFO  | Assert that expected result : Accepted are equal to actual: Accepted\r\n"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "NonParallelWorker"
+  }, {
+    "name" : "host",
+    "value" : "EPBYGOMW0772"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.Tests.ProjectTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestToDeleteProject"
+  }, {
+    "name" : "package",
+    "value" : "Tests.Tests.ProjectTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "ce224a63a4dfd146",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071985352,
+        "stop" : 1536071985567,
+        "duration" : 215
+      }
+    }, {
+      "uid" : "9621ccc84f4c3dff",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071978455,
+        "stop" : 1536071978676,
+        "duration" : 221
+      }
+    }, {
+      "uid" : "ed38179a603a3ccc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071920776,
+        "stop" : 1536071921002,
+        "duration" : 226
+      }
+    }, {
+      "uid" : "3ffdb069d320d938",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071631451,
+        "stop" : 1536071631673,
+        "duration" : 222
+      }
+    }, {
+      "uid" : "d840a2cb862c3485",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071561745,
+        "stop" : 1536071561974,
+        "duration" : 229
+      }
+    }, {
+      "uid" : "702021f880806af3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071466159,
+        "stop" : 1536071466359,
+        "duration" : 200
+      }
+    }, {
+      "uid" : "4d16dc290e81b04b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071361719,
+        "stop" : 1536071361926,
+        "duration" : 207
+      }
+    }, {
+      "uid" : "3d7bc1128f890a77",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536071096150,
+        "stop" : 1536071096374,
+        "duration" : 224
+      }
+    }, {
+      "uid" : "b395763467b9d6fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1536070945774,
+        "stop" : 1536070945984,
+        "duration" : 210
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "adf2831b5995aa9.json",
+  "parameterValues" : [ ]
+}

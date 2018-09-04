@@ -1,0 +1,62 @@
+{
+  "uuid": "15f7f394-39c7-46dd-b156-999930f3ac0b-tr-0-1011",
+  "historyId": "Tests.Tests.ProjectTests.TestAddProject",
+  "fullName": "Tests.Tests.ProjectTests.TestAddProject",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.ProjectTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestAddProject"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.ProjectTests"
+    }
+  ],
+  "links": [],
+  "name": "TestAddProject",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestAddProject",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:22:22,220 | INFO  | Adding \"description\" description to json body\r\n2018-09-04 17:22:22,221 | INFO  | Adding \"name\" omgWTF1233w6434yw45werwatew6 to json body\r\n2018-09-04 17:22:22,222 | INFO  | Build json body\r\n2018-09-04 17:22:22,223 | INFO  | Creating https://gitlab.com/api/v4/projects request\r\n2018-09-04 17:22:22,223 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:22:22,224 | INFO  | Using method: POST\r\n2018-09-04 17:22:22,224 | INFO  | Adding json body\r\n2018-09-04 17:22:22,293 | INFO  | Request https://gitlab.com/api/v4/projects created\r\n2018-09-04 17:22:23,102 | INFO  | Assert that expected result : omgWTF1233w6434yw45werwatew6 are equal to actual: omgWTF1233w6434yw45werwatew6\r\n"
+        }
+      ],
+      "start": 1536070942219,
+      "stop": 1536070943103
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536070942219,
+  "stop": 1536070943103
+}

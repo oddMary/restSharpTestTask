@@ -1,0 +1,12 @@
+{
+  "uuid": "dd1fbd6e-2356-4f1e-96be-ab29398ff157-tc-0-1003",
+  "name": "Tests.Tests.FileTests.TestAddFile",
+  "children": [
+    "6469cd6b-20fe-49ab-af5d-e069e44b5da6-tr-0-1006"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1536071974671,
+  "stop": 1536071977314
+}

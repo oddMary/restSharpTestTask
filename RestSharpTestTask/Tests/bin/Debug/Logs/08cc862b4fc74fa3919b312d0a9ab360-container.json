@@ -1,0 +1,12 @@
+{
+  "uuid": "a4b4ac8a-86aa-43d5-aade-450b6407558c-tc-0-1009",
+  "name": "Tests.Tests.ProjectTests.TestRenameProject",
+  "children": [
+    "a0906ff0-a1a4-4bb9-b68c-16170859ad1d-tr-0-1012"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1536071465749,
+  "stop": 1536071466157
+}

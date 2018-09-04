@@ -1,0 +1,12 @@
+{
+  "uuid": "64a75865-5fa0-424d-9f38-3b1ce08a41a3-tc-0-1003",
+  "name": "Tests.Tests.FileTests.TestDeleteFileFromRepository",
+  "children": [
+    "28f6d5eb-7ce0-46a0-a8e3-f4c04ceffa8a-tr-0-1008"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1536072126010,
+  "stop": 1536072128981
+}

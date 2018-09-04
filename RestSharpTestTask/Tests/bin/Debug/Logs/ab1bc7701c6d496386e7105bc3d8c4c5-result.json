@@ -1,0 +1,62 @@
+{
+  "uuid": "34cf5e31-0a64-4ba3-8e27-97cd6f4617d4-tr-0-1015",
+  "historyId": "Tests.Tests.ProjectTests.TestUnarchiveProject",
+  "fullName": "Tests.Tests.ProjectTests.TestUnarchiveProject",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.ProjectTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestUnarchiveProject"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.ProjectTests"
+    }
+  ],
+  "links": [],
+  "name": "TestUnarchiveProject",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestUnarchiveProject",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:32:42,299 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/unarchive request\r\n2018-09-04 17:32:42,300 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:32:42,302 | INFO  | Using method: POST\r\n2018-09-04 17:32:42,306 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:32:42,307 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/unarchive created\r\n2018-09-04 17:32:43,061 | INFO  | Assert that expected result : Created are equal to actual: Created\r\n"
+        }
+      ],
+      "start": 1536071562299,
+      "stop": 1536071563062
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536071562299,
+  "stop": 1536071563062
+}

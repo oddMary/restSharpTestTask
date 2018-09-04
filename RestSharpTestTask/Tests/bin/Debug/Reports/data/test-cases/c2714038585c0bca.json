@@ -1,0 +1,72 @@
+{
+  "uid" : "c2714038585c0bca",
+  "name" : "TestDeleteWikiPage",
+  "fullName" : "Tests.Tests.ProjectTests.TestDeleteWikiPage",
+  "historyId" : "Tests.Tests.ProjectTests.TestDeleteWikiPage",
+  "time" : {
+    "start" : 1536071464929,
+    "stop" : 1536071465541,
+    "duration" : 612
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "TestDeleteWikiPage",
+      "time" : {
+        "start" : 1536071464929,
+        "stop" : 1536071465541,
+        "duration" : 612
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "Console Output",
+        "value" : "2018-09-04 17:31:04,930 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/wikis/{slug} request\r\n2018-09-04 17:31:04,932 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:31:04,933 | INFO  | Using method: DELETE\r\n2018-09-04 17:31:04,934 | INFO  | Adding header \"projectId\": 8224749\r\n2018-09-04 17:31:04,935 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/wikis/{slug} created\r\n2018-09-04 17:31:05,540 | INFO  | Assert that expected result : NoContent are equal to actual: NoContent\r\n"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "NonParallelWorker"
+  }, {
+    "name" : "host",
+    "value" : "EPBYGOMW0772"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.Tests.ProjectTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestDeleteWikiPage"
+  }, {
+    "name" : "package",
+    "value" : "Tests.Tests.ProjectTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c2714038585c0bca.json",
+  "parameterValues" : [ ]
+}

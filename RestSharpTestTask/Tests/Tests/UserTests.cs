@@ -3,13 +3,15 @@ using GitLabAPI.Factories;
 using GitLabAPI.Features;
 using GitLabAPI.Services;
 using GitLabAPI.Wrapper;
+using NUnit.Allure.Core;
 using NUnit.Framework;
 using RestSharp;
 using static GitLabAPI.GlobalParameters;
 
-namespace GitLabAPI.Tests
+namespace Tests.Tests
 {
     [TestFixture]
+    [AllureNUnit]
     public class UserTests
     {
         RestClient Client;
@@ -25,7 +27,7 @@ namespace GitLabAPI.Tests
         [OneTimeSetUp]
         public void SetUpServiceObject()
         {
-            Client = CreateClient.GetNewClient(BASE_URL);
+            Client = ClientFactory.GetInstance();
         }
 
         [Test]
@@ -35,7 +37,7 @@ namespace GitLabAPI.Tests
             IRestResponse RestResponse = Client.Execute(GetRequest);
             string state = JsonDeserializer.ReturnJsonValue("state", RestResponse); ;
 
-            AssertService.AreEqual(state, _state);
+            AssertService.AssertEqual(state, _state);
         }
 
         [Test]
@@ -43,11 +45,11 @@ namespace GitLabAPI.Tests
         {
             object json = UserJsonBodyBuilder.SetMessage(_defaultStatusMessage).Build();
 
-            RestRequest GetRequest = RequestFactory.RequestWithJsonBody(_requestUrlUserStatus, Method.GET, json);
+            RestRequest GetRequest = RequestFactory.ProjectRequest(_requestUrlUserStatus, Method.GET, json);
             IRestResponse RestResponse = Client.Execute(GetRequest);
             string message = JsonDeserializer.ReturnJsonValue("message", RestResponse); ;
 
-            AssertService.AreEqual(_defaultStatusMessage, message);
+            AssertService.AssertEqual(_defaultStatusMessage, message);
         }
 
         [Test]
@@ -55,11 +57,11 @@ namespace GitLabAPI.Tests
         {
             object json = UserJsonBodyBuilder.SetMessage(_message).Build();
 
-            RestRequest GetRequest = RequestFactory.RequestWithJsonBody(_requestUrlUserStatus, Method.PUT, json);
+            RestRequest GetRequest = RequestFactory.ProjectRequest(_requestUrlUserStatus, Method.PUT, json);
             IRestResponse RestResponse = Client.Execute(GetRequest);
             string message = JsonDeserializer.ReturnJsonValue("message", RestResponse); ;
 
-            AssertService.AreEqual(_message, message);
+            AssertService.AssertEqual(_message, message);
         }
 
         [Test]
@@ -67,11 +69,11 @@ namespace GitLabAPI.Tests
         {
             object json = UserJsonBodyBuilder.SetId(_userId).SetEmail(_email).Build();
 
-            RestRequest GetRequest = RequestFactory.RequestWithJsonBody(_requestUrlEmails, Method.POST, json);
+            RestRequest GetRequest = RequestFactory.ProjectRequest(_requestUrlEmails, Method.POST, json);
             IRestResponse RestResponse = Client.Execute(GetRequest);
             string message = RegexMessage.RegexWarningMessage(JsonDeserializer.ReturnJsonValue("message", RestResponse));
 
-            AssertService.AreEqual(_warningMessageExistedEmail, message);
+            AssertService.AssertEqual(_warningMessageExistedEmail, message);
         }
 
         [OneTimeTearDown]
@@ -79,7 +81,7 @@ namespace GitLabAPI.Tests
         {
             object json = UserJsonBodyBuilder.SetMessage(_defaultStatusMessage).Build();
 
-            RestRequest GetRequest = RequestFactory.RequestWithJsonBody(_requestUrlUserStatus, Method.PUT, json);
+            RestRequest GetRequest = RequestFactory.ProjectRequest(_requestUrlUserStatus, Method.PUT, json);
             IRestResponse RestResponse = Client.Execute(GetRequest);
         }
     }

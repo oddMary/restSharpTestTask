@@ -1,0 +1,62 @@
+{
+  "uuid": "b27f6c65-f2e5-4a65-861c-cbbcebf5d1fa-tr-0-1004",
+  "historyId": "Tests.Tests.FileTests.TestUploadFileWithoutCommitMessage",
+  "fullName": "Tests.Tests.FileTests.TestUploadFileWithoutCommitMessage",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.FileTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestUploadFileWithoutCommitMessage"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.FileTests"
+    }
+  ],
+  "links": [],
+  "name": "TestUploadFileWithoutCommitMessage",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestUploadFileWithoutCommitMessage",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-04 17:39:40,637 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} request\r\n2018-09-04 17:39:40,638 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-04 17:39:40,639 | INFO  | Using method: POST\r\n2018-09-04 17:39:40,640 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-04 17:39:40,640 | INFO  | Adding header \"fileName\": wtfFile\r\n2018-09-04 17:39:40,641 | INFO  | Adding json body\r\n2018-09-04 17:39:40,642 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/files/{fileName} created\r\n2018-09-04 17:39:40,937 | INFO  | Assert that expected result : commit_message is missing, commit_message is empty, content is missing are equal to actual: commit_message is missing, commit_message is empty, content is missing\r\n"
+        }
+      ],
+      "start": 1536071980637,
+      "stop": 1536071980937
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536071980637,
+  "stop": 1536071980938
+}
