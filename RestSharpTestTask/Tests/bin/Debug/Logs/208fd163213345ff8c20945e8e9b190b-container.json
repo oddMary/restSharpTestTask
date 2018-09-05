@@ -1,0 +1,12 @@
+{
+  "uuid": "776bae23-9522-4bd6-be33-224b21001f83-tc-0-1000",
+  "name": "Tests.Tests.BranchTests.TestDeleteBranch",
+  "children": [
+    "224eb36c-ab2e-4da8-aa7f-eb34d804df4e-tr-0-1002"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1536132491032,
+  "stop": 1536132491651
+}

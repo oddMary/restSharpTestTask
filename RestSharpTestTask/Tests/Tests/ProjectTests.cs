@@ -8,6 +8,7 @@ using NUnit.Framework;
 using RestSharp;
 using static GitLabAPI.GlobalParameters;
 using NUnit.Allure.Core;
+using GitLabAPI.Tool;
 
 namespace Tests.Tests
 {
@@ -18,6 +19,7 @@ namespace Tests.Tests
         RestClient Client;
         ProjectJsonBodyBuilder ProjectJsonBody => new ProjectJsonBodyBuilder();
         WikiJsonBodyBuilder WikiJsonBody => new WikiJsonBodyBuilder();
+        private static readonly Logger _logger = new Logger(typeof(ProjectTests));
 
         public int NewProject { get; set; }
 
@@ -41,6 +43,7 @@ namespace Tests.Tests
         {
             RestRequest GetRequest = RequestFactory.CustomRequest(_requestUrlNamespaces, Method.GET);
             IRestResponse RestResponse = Client.Execute(GetRequest);
+            _logger.Info($"Response {RestResponse.ResponseUri} received");
             string statusCode = RestResponse.StatusCode.ToString();
 
             AssertService.AssertEqual(StatusCode.Ok.ToString().ToUpper(), statusCode);
@@ -53,6 +56,7 @@ namespace Tests.Tests
 
             RestRequest GetRequest = RequestFactory.ProjectRequest("projects", Method.POST, json);
             IRestResponse RestResponse = Client.Execute(GetRequest);
+            _logger.Info($"Response {RestResponse.ResponseUri} received");
             //Set project id
             NewProject = int.Parse(JsonDeserializer.ReturnJsonValue("id", RestResponse));
             string name = JsonDeserializer.ReturnJsonValue("name", RestResponse); ;
@@ -67,6 +71,7 @@ namespace Tests.Tests
 
             RestRequest GetRequest = RequestFactory.ProjectRequestWithJson(_requestUrlUpdateProject, Method.PUT, NewProject, json);
             IRestResponse RestResponse = Client.Execute(GetRequest);
+            _logger.Info($"Response {RestResponse.ResponseUri} received");
             string name = JsonDeserializer.ReturnJsonValue("name", RestResponse); ;
 
             AssertService.AssertEqual(_newProjectName, name);
@@ -77,6 +82,7 @@ namespace Tests.Tests
         {
             RestRequest GetRequest = RequestFactory.ProjectRequest(_requestUrlArchived, Method.POST, _projectId);
             IRestResponse RestResponse = Client.Execute(GetRequest);
+            _logger.Info($"Response {RestResponse.ResponseUri} received");
             string statusCode = RestResponse.StatusCode.ToString();
 
             AssertService.AssertEqual(StatusCode.Created.ToString(), statusCode);
@@ -89,6 +95,7 @@ namespace Tests.Tests
 
             RestRequest GetRequest = RequestFactory.FileRequest(_requestUrlFile, Method.POST, _projectId, _fileName, json);
             IRestResponse RestResponse = Client.Execute(GetRequest);
+            _logger.Info($"Response {RestResponse.ResponseUri} received");
             string statusCode = RestResponse.StatusCode.ToString();
 
             AssertService.AssertEqual(StatusCode.Forbidden.ToString(), statusCode);
@@ -99,6 +106,7 @@ namespace Tests.Tests
         {
             RestRequest GetRequest = RequestFactory.ProjectRequest(_requestUrlUnarchived, Method.POST, _projectId);
             IRestResponse RestResponse = Client.Execute(GetRequest);
+            _logger.Info($"Response {RestResponse.ResponseUri} received");
             string statusCode = RestResponse.StatusCode.ToString();
 
             AssertService.AssertEqual(StatusCode.Created.ToString(), statusCode);
@@ -111,6 +119,7 @@ namespace Tests.Tests
 
             RestRequest GetRequest = RequestFactory.ProjectRequestWithJson(_requestUrlWiki, Method.POST, NewProject, json);
             IRestResponse RestResponse = Client.Execute(GetRequest);
+            _logger.Info($"Response {RestResponse.ResponseUri} received");
             string title = JsonDeserializer.ReturnJsonValue("title", RestResponse); ;
 
             AssertService.AssertEqual(_wikiTitle, title);
@@ -122,6 +131,7 @@ namespace Tests.Tests
             RestRequest GetRequest = RequestFactory.ProjectRequest(_requestUrlWikiDelete, Method.DELETE, NewProject);
             GetRequest.AddUrlSegment("slug", _wikiTitle);
             IRestResponse RestResponse = Client.Execute(GetRequest);
+            _logger.Info($"Response {RestResponse.ResponseUri} received");
             string statusCode = RestResponse.StatusCode.ToString();
 
             AssertService.AssertEqual(StatusCode.NoContent.ToString(), statusCode);
@@ -132,6 +142,7 @@ namespace Tests.Tests
         {
             RestRequest GetRequest = RequestFactory.ProjectRequest(_requestUrlUpdateProject, Method.DELETE, NewProject);
             IRestResponse RestResponse = Client.Execute(GetRequest);
+            _logger.Info($"Response {RestResponse.ResponseUri} received");
             string statusCode = RestResponse.StatusCode.ToString();
 
             AssertService.AssertEqual(StatusCode.Accepted.ToString(), statusCode);

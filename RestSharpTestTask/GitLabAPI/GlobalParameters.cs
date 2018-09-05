@@ -33,7 +33,8 @@ namespace GitLabAPI
         public static string KDTFilePathAdd = "../../Resources/KDTAddBranchTest.yml";
         public static string KDTFilePathDelete = "../../Resources/KDTDeleteBranchTest.yml";
 
-        public static string nunitConsolePath = "../../../Resources/nunit3-console/nunit3-console.exe";
-        public static string testPath = "Tests.exe";
+        public static string _nunitConsolePath = "../../../Resources/nunit3-console/nunit3-console.exe";
+        public static string _testPath = "Tests.exe";
+        public static string _allureReport = @"\index.html";
     }
 }

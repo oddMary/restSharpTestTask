@@ -9,14 +9,16 @@ namespace Tests
 {
     public class Program
     {
-        public static string filePath = GetFilePath.GetPath(nunitConsolePath);
-        public static string tests = GetFilePath.GetPath(testPath);
+        public static string filePath = GetFilePath.GetPath(_nunitConsolePath);
+        public static string tests = GetFilePath.GetPath(_testPath);
         public static string logs = GetFilePath.GetPath("Logs");
         public static string report = GetFilePath.GetPath("Reports");
 
         public static void Main(string[] args)
         {
-            var processInfo = new ProcessStartInfo{FileName = filePath, Arguments = tests };
+            if (Directory.Exists(logs)) Directory.Delete(logs, true);
+
+            var processInfo = new ProcessStartInfo { FileName = filePath, Arguments = tests };
             var process = new Process { StartInfo = processInfo };
 
             process.Start();
@@ -67,7 +69,7 @@ namespace Tests
 
         public static void OpenReport(string output)
         {
-            Process.Start("D:/TicketMasterTasks/4/My/restSharpTestTask/RestSharpTestTask/Tests/bin/Debug/Reports/index.html");
+            Process.Start(string.Concat(output, _allureReport));
         }
     }
 }

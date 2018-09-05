@@ -2,6 +2,7 @@
 using GitLabAPI.Factories;
 using GitLabAPI.Features;
 using GitLabAPI.Services;
+using GitLabAPI.Tool;
 using GitLabAPI.Wrapper;
 using NUnit.Allure.Core;
 using NUnit.Framework;
@@ -16,6 +17,7 @@ namespace Tests.Tests
     {
         RestClient Client;
         UserJsonBodyBuilder UserJsonBodyBuilder => new UserJsonBodyBuilder();
+        private static readonly Logger _logger = new Logger(typeof(UserTests));
 
         public string _state = "active";
         public string _defaultStatusMessage = "null";
@@ -35,6 +37,7 @@ namespace Tests.Tests
         {
             RestRequest GetRequest = RequestFactory.UserRequest(_requestUrlGetUserState, Method.GET, _userId);
             IRestResponse RestResponse = Client.Execute(GetRequest);
+            _logger.Info($"Response {RestResponse.ResponseUri} received");
             string state = JsonDeserializer.ReturnJsonValue("state", RestResponse); ;
 
             AssertService.AssertEqual(state, _state);
@@ -47,6 +50,7 @@ namespace Tests.Tests
 
             RestRequest GetRequest = RequestFactory.ProjectRequest(_requestUrlUserStatus, Method.GET, json);
             IRestResponse RestResponse = Client.Execute(GetRequest);
+            _logger.Info($"Response {RestResponse.ResponseUri} received");
             string message = JsonDeserializer.ReturnJsonValue("message", RestResponse); ;
 
             AssertService.AssertEqual(_defaultStatusMessage, message);
@@ -59,6 +63,7 @@ namespace Tests.Tests
 
             RestRequest GetRequest = RequestFactory.ProjectRequest(_requestUrlUserStatus, Method.PUT, json);
             IRestResponse RestResponse = Client.Execute(GetRequest);
+            _logger.Info($"Response {RestResponse.ResponseUri} received");
             string message = JsonDeserializer.ReturnJsonValue("message", RestResponse); ;
 
             AssertService.AssertEqual(_message, message);
@@ -71,6 +76,7 @@ namespace Tests.Tests
 
             RestRequest GetRequest = RequestFactory.ProjectRequest(_requestUrlEmails, Method.POST, json);
             IRestResponse RestResponse = Client.Execute(GetRequest);
+            _logger.Info($"Response {RestResponse.ResponseUri} received");
             string message = RegexMessage.RegexWarningMessage(JsonDeserializer.ReturnJsonValue("message", RestResponse));
 
             AssertService.AssertEqual(_warningMessageExistedEmail, message);

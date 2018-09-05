@@ -1,0 +1,62 @@
+{
+  "uuid": "224eb36c-ab2e-4da8-aa7f-eb34d804df4e-tr-0-1002",
+  "historyId": "Tests.Tests.BranchTests.TestDeleteBranch",
+  "fullName": "Tests.Tests.BranchTests.TestDeleteBranch",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPBYGOMW0772"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests.Tests.BranchTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestDeleteBranch"
+    },
+    {
+      "name": "package",
+      "value": "Tests.Tests.BranchTests"
+    }
+  ],
+  "links": [],
+  "name": "TestDeleteBranch",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TestDeleteBranch",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "Console Output",
+          "value": "2018-09-05 10:28:11,033 | INFO  | Creating https://gitlab.com/api/v4/projects/{projectId}/repository/branches/{newBranch} request\r\n2018-09-05 10:28:11,034 | INFO  | Adding header \"Private-Tokken\"\r\n2018-09-05 10:28:11,034 | INFO  | Using method: DELETE\r\n2018-09-05 10:28:11,035 | INFO  | Adding header \"projectId\": 8156878\r\n2018-09-05 10:28:11,035 | INFO  | Adding header \"newBranch\" newBranch\r\n2018-09-05 10:28:11,036 | INFO  | Request https://gitlab.com/api/v4/projects/{projectId}/repository/branches/{newBranch} created\r\n2018-09-05 10:28:11,036 | INFO  | Adding header \"branch\": master\r\n2018-09-05 10:28:11,641 | INFO  | Response https://gitlab.com/api/v4/projects/8156878/repository/branches/newBranch received\r\n2018-09-05 10:28:11,646 | INFO  | Assert that expected result : NoContent are equal to actual: NoContent\r\n"
+        }
+      ],
+      "start": 1536132491032,
+      "stop": 1536132491649
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1536132491032,
+  "stop": 1536132491649
+}
